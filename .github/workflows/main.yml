@@ -15,12 +15,8 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Setup SSH key
-      uses: actions/setup-ssh@latest
-      with:
-        ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        host: turkberry.ca
-        port: 22490
+    - name: Add private key to environment variables
+      run: echo "ssh-add <(echo \"${{ secrets.SSH_PRIVATE_KEY }}\")" >> $GITHUB_ENV
 
     - name: Deploy code
       run: |
