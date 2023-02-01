@@ -1,0 +1,28 @@
+name: Deployment
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup SSH key
+      uses: shimataro/ssh-key-action@v0.4.0
+      with:
+        host: turkberry.ca
+        port: 22490
+        username: ${{ secrets.SSH_USERNAME }}
+        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Deploy code
+      run: |
+        ssh ${{ secrets.SSH_USERNAME }}@turkberry.ca 'cd domains/turkberry.ca/public_html && git pull origin main'
