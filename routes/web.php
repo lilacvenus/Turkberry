@@ -17,6 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/admins/index', function () {
+    return view('admins.index');
+});
+
+Route::get('/admins/create', function () {
+    return view('admins.create');
+});
+
+Route::get('/admins/edit', function () {
+    return view('admins.edit');
+});
