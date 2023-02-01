@@ -1,10 +1,10 @@
-name: Deployment
+name: Deploy To Web Server
 
 on:
+  push:
+    branches: [main]
   pull_request:
     types: [closed]
-    branches: [main]
-  push:
     branches: [main]
 
 jobs:
@@ -24,4 +24,4 @@ jobs:
 
     - name: Deploy code
       run: |
-        ssh ${{ secrets.SSH_USERNAME }}@turkberry.ca 'cd domains/turkberry.ca/public_html && git pull origin main'
+        ssh deviousd@turkberry.ca 'cd domains/turkberry.ca/public_html && git pull origin main'
