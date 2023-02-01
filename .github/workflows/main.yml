@@ -20,9 +20,12 @@ jobs:
       
     - name: Install OpenSSH client
       run: sudo apt-get update && sudo apt-get install -y openssh-client
+      
+    - name: Convert private key
+      run: echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > id_rsa
 
     - name: Add private key to environment variables
-      run: echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add -
+      run: ssh-add id_rsa
 
     - name: Deploy code
       run: |
