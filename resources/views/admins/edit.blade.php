@@ -11,7 +11,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Admins Create') }}</div>
+                    <div class="card-header">{{ __('Admins Edit') }}</div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -51,7 +51,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-sm-10">
-                                    <button type="submit" class="btn btn-primary">Create Admin</button>
+                                    <button type="submit" class="btn btn-primary">Save Admin</button>
                                 </div>
                             </div>
                         </form>

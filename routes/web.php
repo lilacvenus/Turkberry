@@ -33,3 +33,11 @@ Route::get('/admins/create', function () {
 Route::get('/admins/edit', function () {
     return view('admins.edit');
 });
+
+Route::get('/products/create', function () {
+    return view('products.create');
+});
+
+Route::get('/products/edit', function () {
+    return view('products.edit');
+});
