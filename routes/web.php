@@ -41,3 +41,7 @@ Route::get('/products/create', function () {
 Route::get('/products/edit', function () {
     return view('products.edit');
 });
+
+Route::get('/products/index', function () {
+    return view('products.index');
+});
