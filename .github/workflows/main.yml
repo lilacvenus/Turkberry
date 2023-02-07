@@ -25,7 +25,7 @@ jobs:
         host: turkberry.ca
         username: deviousd
         port: 22490
-        identity-file: ${{ env.SSH_PRIVATE_KEY }}
+        key: ${{ env.SSH_PRIVATE_KEY }}
         script: |
           cd domains/turkberry.ca/public_html
           git clone https://github.com/{{ github.repository }}.git .
