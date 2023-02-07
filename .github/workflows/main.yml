@@ -8,9 +8,6 @@ on:
     branches:
       - main
 
-env:
-  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -19,13 +16,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: SSH into server
+    - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@v0.1.7
       with:
-        host: turkberry.ca
-        username: deviousd
-        port: 22490
-        key: ${{ env.SSH_PRIVATE_KEY }}
-        script: |
-          cd domains/turkberry.ca/public_html
-          git clone https://github.com/{{ github.repository }}.git .
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: whoami
