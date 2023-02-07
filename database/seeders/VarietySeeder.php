@@ -17,8 +17,7 @@ class VarietySeeder extends Seeder
     {
         DB::table('varieties')->insert([
             'name' => 'Almond',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Almond.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -26,8 +25,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Amaretto',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Amaretto.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -35,8 +33,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Banana Cream',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Banana-Cream.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -44,8 +41,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Birthday Cake',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Birthday-Cake.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -53,8 +49,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Bubble Gum',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Bubble-Gum.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -62,8 +57,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Cappuccino',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Cappuccino.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -71,8 +65,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Cheesecake',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Cheesecake.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -80,17 +73,15 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Chocolate',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Chocolate.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
-            'name' => 'Chocoloco',
-            'description' => '',
-            'image' => '',
+            'name' => 'Coco Loco',
+            'image' => 'resources/turkberry-assets/flavors/Coco-Loco.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -98,8 +89,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Creamsicle',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Creamsicle.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -107,8 +97,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Forest Berries',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Forest-Berries.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -116,8 +105,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Green Apple',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Green-Apple.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -125,8 +113,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Green Tea',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Green-Tea.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -134,8 +121,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Lemon',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Lemon.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -143,8 +129,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Lime',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Lime.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -152,8 +137,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Mango Tango',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Mango-Tango.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -161,8 +145,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Mint Chocolate',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Mint-Chocolate.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -170,8 +153,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Nutella',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Nutella.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -179,8 +161,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Original Bight',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Original-Bight.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -188,8 +169,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Peach Mango',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Peach-Mango.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -197,8 +177,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Peppermint Pattie',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Peppermint-Pattie.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -206,8 +185,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Pineapple',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Pineapple.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -215,8 +193,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Pumpkin Spice',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Pumpkin-Spice.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -224,8 +201,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Raspberry',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Raspberry.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -233,8 +209,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Red Velvet',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Red-Velvet.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -242,8 +217,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Salted Caramel',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Salted-Caramel.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -251,8 +225,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Strawberry',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Strawberry.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -260,8 +233,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Sweet Watermelon',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Sweet-Watermelon.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -269,8 +241,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Venetian Cream',
-            'description' => '',
-            'image' => '',
+            'image' => 'resources/turkberry-assets/flavors/Venetian-Cream.png',
             'availability' => true,
             'type' => 'Frozen Yogurt',
             'stock' => true
@@ -287,8 +258,6 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Milk Chocolate',
-            'description' => '',
-            'image' => '',
             'availability' => true,
             'type' => 'Milkshake',
             'stock' => true
@@ -296,8 +265,6 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Dark Chocolate',
-            'description' => '',
-            'image' => '',
             'availability' => true,
             'type' => 'Milkshake',
             'stock' => true
@@ -305,19 +272,17 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Strawberry',
-            'description' => '',
-            'image' => '',
             'availability' => true,
             'type' => 'Milkshake',
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
-            'name' => 'Vanilla',
+            'name' => 'Cookies and Cream',
             'description' => '',
             'image' => '',
             'availability' => true,
-            'type' => 'Cookies and Cream',
+            'type' => 'Milkshake',
             'stock' => true
         ]);
 
@@ -376,38 +341,289 @@ class VarietySeeder extends Seeder
         ]);
 
         DB::table('varieties')->insert([
-            'name' => 'Vanilla',
-            'description' => '',
-            'image' => '',
-            'availability' => false,
-            'type' => 'Donut',
+            'name' => 'Powdered Sugar',
+            'availability' => true,
+            'type' => 'Coating',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Cinnamon Sugar',
+            'availability' => true,
+            'type' => 'Coating',
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Chocolate',
-            'description' => '',
-            'image' => '',
-            'availability' => false,
-            'type' => 'Donut',
+            'availability' => true,
+            'type' => 'Coating',
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
-            'name' => 'Maple',
-            'description' => '',
-            'image' => '',
-            'availability' => false,
-            'type' => 'Donut',
+            'name' => 'Vanilla',
+            'availability' => true,
+            'type' => 'Coating',
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Caramel',
-            'description' => '',
-            'image' => '',
-            'availability' => false,
-            'type' => 'Donut',
+            'availability' => true,
+            'type' => 'Coating',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Maple',
+            'availability' => true,
+            'type' => 'Coating',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Glaze',
+            'availability' => true,
+            'type' => 'Coating',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Strawberry',
+            'availability' => true,
+            'type' => 'Coating',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Lemon',
+            'availability' => true,
+            'type' => 'Coating',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Key Lime',
+            'availability' => true,
+            'type' => 'Coating',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Cherry',
+            'availability' => true,
+            'type' => 'Coating',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Blueberry',
+            'availability' => true,
+            'type' => 'Coating',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Banana Crème',
+            'availability' => true,
+            'type' => 'Coating',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'M&M\'s Mini',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Reese Mini',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Coconut Flakes',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Rainbow Sprinkles',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Chocolate Sprinkles',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Pink Sprinkles',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Yellow Sprinkles',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Chopped Peanuts',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Powdered Sugar',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Rock Sugar',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Chopped Cookie',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Bacon',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Chopped Kit Kat',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Almond Slices',
+            'availability' => true,
+            'type' => 'Topping',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Powdered Sugar',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Cinnamon Sugar',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Chocolate',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Vanilla',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Caramel',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Maple',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Glaze',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Strawberry',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Lemon',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Key Lime',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Cherry',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Blueberry',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Banana Crème',
+            'availability' => true,
+            'type' => 'Drizzle',
+            'stock' => true
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Marshmallow',
+            'availability' => true,
+            'type' => 'Drizzle',
             'stock' => true
         ]);
     }
