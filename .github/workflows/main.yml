@@ -25,4 +25,4 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd public_html
-          git clone https://github.com/{{ github.repository }}.git .
+          git clone https://github.com/lilacvenus/Turkberry .
