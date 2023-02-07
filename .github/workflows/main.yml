@@ -25,6 +25,4 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd public_html
-          git fetch origin
-          git checkout main
-          git reset --hard origin/main
+          git pull origin main
