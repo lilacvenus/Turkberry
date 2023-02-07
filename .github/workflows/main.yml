@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name: executing remote ssh commands using ssh key
+    - name: SSH & Pull Origin Main
       uses: appleboy/ssh-action@v0.1.7
       with:
         host: ${{ secrets.HOST }}
