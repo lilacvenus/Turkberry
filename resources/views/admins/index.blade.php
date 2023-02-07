@@ -26,19 +26,8 @@
                                         <div class="col-2"><h3>Admins Name</h3></div>
                                         <div class="col-2"><a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Create Admin</a></div>
                                         <div class="col-2"><a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete</a></div>
-
                                     </div>
                                 </div>
-
-
-
-
-
-
-
-
-
-
 
                             </table>
                         </div>
