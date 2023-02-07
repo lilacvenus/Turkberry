@@ -17,17 +17,14 @@ class HeaderSeeder extends Seeder
     {
         DB::table('headers')->insert([
             'type' => 'Soft Drinks',
-            'details' => null,
         ]);
 
         DB::table('headers')->insert([
             'type' => 'Beer',
-            'details' => null,
         ]);
 
         DB::table('headers')->insert([
             'type' => 'Wine',
-            'details' => null,
         ]);
 
         DB::table('headers')->insert([
@@ -63,6 +60,7 @@ class HeaderSeeder extends Seeder
         DB::table('headers')->insert([
             'type' => 'Milkshake',
             'details' => 'Regular - $12.00',
+            'image' => 'resources/turkberry-assets/Milkshakes/milkshakes.png',
         ]);
 
         DB::table('headers')->insert([
@@ -73,6 +71,18 @@ class HeaderSeeder extends Seeder
         DB::table('headers')->insert([
             'type' => 'Hurricane',
             'details' => 'Large - $11.25',
+        ]);
+
+        DB::table('headers')->insert([
+            'type' => 'Drizzle',
+        ]);
+
+        DB::table('headers')->insert([
+            'type' => 'Topping',
+        ]);
+
+        DB::table('headers')->insert([
+            'type' => 'Coating',
         ]);
 
         DB::table('headers')->insert([
@@ -96,77 +106,77 @@ class HeaderSeeder extends Seeder
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Brewed',
+            'type' => 'Brewed',
             'details' => 'Small - $2.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Brewed',
+            'type' => 'Brewed',
             'details' => 'Medium - $3.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Brewed',
+            'type' => 'Brewed',
             'details' => 'Large - $4.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Brewed',
+            'type' => 'Brewed',
             'details' => 'Carafe - $20.00',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Brewed',
+            'type' => 'Brewed',
             'details' => 'Morning Miracle - $4.00 \n(Medium coffee + personalized donut)',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Latte',
+            'type' => 'Latte',
             'details' => 'Small - $3.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Latte',
+            'type' => 'Latte',
             'details' => 'Medium - $4.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Latte',
+            'type' => 'Latte',
             'details' => 'Large - $5.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Cappuccino',
+            'type' => 'Cappuccino',
             'details' => 'Small - $3.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Cappuccino',
+            'type' => 'Cappuccino',
             'details' => 'Medium - $4.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Cappuccino',
+            'type' => 'Cappuccino',
             'details' => 'Large - $5.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Other',
+            'type' => 'Other',
             'details' => 'Espresso - $2.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Other',
+            'type' => 'Other',
             'details' => 'Additional Espresso Shot - $1.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Other',
+            'type' => 'Other',
             'details' => 'Soy / Almond Milk - $0.50',
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Coffee - Other',
+            'type' => 'Other',
             'details' => 'Flavor Shots - $0.50',
         ]);
     }
