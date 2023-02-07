@@ -25,4 +25,6 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd public_html
-          git clone https://github.com/lilacvenus/Turkberry .
+          git fetch origin
+          git checkout main
+          git reset --hard origin/main
