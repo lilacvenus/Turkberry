@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('image')->nullable();
             $table->boolean('availability');
-            $table->foreign('type');
+            $table->string('type');
             $table->boolean('stock');
             $table->timestamps();
 
