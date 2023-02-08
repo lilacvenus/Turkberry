@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('headers', function (Blueprint $table) {
             $table->id();
-            $table->string("type");
-            $table->string("details")->nullable();
-            $table->string("image")->nullable();
+            $table->string('type');
+            $table->string('details')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
