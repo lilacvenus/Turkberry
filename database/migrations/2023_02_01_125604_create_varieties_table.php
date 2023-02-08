@@ -19,11 +19,9 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('image')->nullable();
             $table->boolean('availability');
-            $table->string('type');
+            $table->string('type')->references('type')->on('headers');
             $table->boolean('stock');
             $table->timestamps();
-
-            $table->foreign('type')->references('type')->on('headers');
         });
     }
 
