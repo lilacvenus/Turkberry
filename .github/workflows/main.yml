@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+    types: [closed]
 
 jobs:
   deploy:
@@ -26,3 +27,4 @@ jobs:
         script: |
           cd public_html
           git pull origin main
+          php artisan migrate:fresh --seed
