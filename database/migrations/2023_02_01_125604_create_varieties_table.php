@@ -16,10 +16,10 @@ return new class extends Migration
         Schema::create('varieties', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
-            $table->string('image');
+            $table->string('description')->nullable();
+            $table->string('image')->nullable();
             $table->boolean('availability');
-            $table->string('type');
+            $table->string('type')->references('type')->on('headers');
             $table->boolean('stock');
             $table->timestamps();
         });

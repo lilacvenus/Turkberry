@@ -37,6 +37,11 @@ class GroupSeeder extends Seeder
 
         DB::table('groups')->insert([
             'name' => 'Frozen Treats',
+            'header' => 'Topping',
+        ]);
+
+        DB::table('groups')->insert([
+            'name' => 'Frozen Treats',
             'header' => 'Milkshake',
         ]);
 
@@ -47,7 +52,17 @@ class GroupSeeder extends Seeder
 
         DB::table('groups')->insert([
             'name' => 'Donuts',
-            'header' => 'Make Your Own',
+            'header' => 'Coating',
+        ]);
+
+        DB::table('groups')->insert([
+            'name' => 'Donuts',
+            'header' => 'Topping',
+        ]);
+
+        DB::table('groups')->insert([
+            'name' => 'Donuts',
+            'header' => 'Drizzle',
         ]);
 
         DB::table('groups')->insert([

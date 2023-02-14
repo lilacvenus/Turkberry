@@ -1,32 +1,30 @@
-name: Deploy To Web Server
+name: Deploy to Server
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
+    branches:
+      - main
     types: [closed]
-    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
+    - name: Checkout Code
       uses: actions/checkout@v2
-      
-    - name: Start SSH agent
-      run: eval "$(ssh-agent -s)"
-      
-    - name: Install OpenSSH client
-      run: sudo apt-get update && sudo apt-get install -y openssh-client
-      
-    - name: Convert private key
-      run: echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > id_rsa
 
-    - name: Add private key to environment variables
-      run: ssh-add id_rsa
-
-    - name: Deploy code
-      run: |
-        ssh deviousd@turkberry.ca 'cd domains/turkberry.ca/public_html && git pull origin main'
+    - name: SSH & Pull Origin Main
+      uses: appleboy/ssh-action@v0.1.7
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd public_html
+          git pull origin main
+          php artisan migrate:fresh --seed
