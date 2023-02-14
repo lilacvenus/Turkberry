@@ -22,6 +22,8 @@ class DatabaseSeeder extends Seeder
             VarietySeeder::class,
             HeaderSeeder::class,
             GroupSeeder::class,
+            GroupDescriptionSeeder::class,
+            HeaderDescriptionSeeder::class,
         ]);
     }
 }
