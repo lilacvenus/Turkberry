@@ -15,62 +15,170 @@
                             {{ session('status') }}
                         </div>
                     @endif
-{{--                        <div class="table-responsive-sm">--}}
-{{--                            <table class="table">--}}
-
-
-{{--                                <div class="container">--}}
-{{--                                    <div class="row">--}}
-{{--                                        <div class="col-4">  <img src="..." alt="..." class="img-thumbnail"></div>--}}
-{{--                                        <img src="..." class="img-fluid" alt="Responsive image">--}}
-{{--                                        <div class="col-2"><h3>Admins Name</h3></div>--}}
-{{--                                        <div class="col-2"><a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Create Admin</a></div>--}}
-{{--                                        <div class="col-2"><a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete</a></div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-
-{{--                            </table>--}}
-{{--                        </div>--}}
-
-
-
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
 
 
 
 
 
-
-                        <div class="card-deck">
-                            <div class="card">
-                                <img class="card-img-top" src="..." alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        <div class="container px-4 py-5" id="hanging-icons">
+                            <h2 class="pb-2 border-bottom">Turkberry Products</h2>
+                            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                                <div class="col d-flex align-items-start">
+                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+                                    </div>
+                                    <div>
+                                        <div class="fs-2">Frozen Treats</div>
+                                        <div class="fs-2">Frozen Yogurt</div>
+                                        <div>Description: small is 2$</div>
+                                        <div>Description: med is 2.5$</div>
+                                        <div>Description: large is 3$</div>
+{{--                                        <a href="#" class="btn btn-primary">--}}
+{{--                                            Primary button--}}
+{{--                                        </a>--}}
+                                        <img src="../resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <img class="card-img-top" src="..." alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <div class="col d-flex align-items-start">
+                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
+                                    </div>
+                                    <div>
+                                        <div class="fs-2">Frozen Treats</div>
+                                        <div class="fs-2">Frozen Yogurt</div>
+                                        <div>Description: small is 2$</div>
+                                        <div>Description: med is 2.5$</div>
+                                        <div>Description: large is 3$</div>
+                                        {{--                                        <a href="#" class="btn btn-primary">--}}
+                                        {{--                                            Primary button--}}
+                                        {{--                                        </a>--}}
+                                        <img src="../resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card">
-                                <img class="card-img-top" src="..." alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <div class="col d-flex align-items-start">
+                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"></use></svg>
+                                    </div>
+                                    <div>
+                                        <div class="fs-2">Frozen Treats</div>
+                                        <div class="fs-2">Frozen Yogurt</div>
+                                        <div>Description: small is 2$</div>
+                                        <div>Description: med is 2.5$</div>
+                                        <div>Description: large is 3$</div>
+                                        {{--                                        <a href="#" class="btn btn-primary">--}}
+                                        {{--                                            Primary button--}}
+                                        {{--                                        </a>--}}
+                                        <img src="../resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
+                        <div class="container px-4 py-5" id="hanging-icons">
+                            <h2 class="pb-2 border-bottom">Turkberry Products</h2>
+                            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                                <div class="col d-flex align-items-start">
+                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+                                    </div>
+                                    <div>
+                                        <div class="fs-2">Frozen Treats</div>
+                                        <div class="fs-2">Frozen Yogurt</div>
+                                        <div>Description: small is 2$</div>
+                                        <div>Description: med is 2.5$</div>
+                                        <div>Description: large is 3$</div>
+                                        {{--                                        <a href="#" class="btn btn-primary">--}}
+                                        {{--                                            Primary button--}}
+                                        {{--                                        </a>--}}
+                                        <img src="../resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
+                                    </div>
+                                    <div>
+                                        <div class="fs-2">Frozen Treats</div>
+                                        <div class="fs-2">Frozen Yogurt</div>
+                                        <div>Description: small is 2$</div>
+                                        <div>Description: med is 2.5$</div>
+                                        <div>Description: large is 3$</div>
+                                        {{--                                        <a href="#" class="btn btn-primary">--}}
+                                        {{--                                            Primary button--}}
+                                        {{--                                        </a>--}}
+                                        <img src="../resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"></use></svg>
+                                    </div>
+                                    <div>
+                                        <div class="fs-2">Frozen Treats</div>
+                                        <div class="fs-2">Frozen Yogurt</div>
+                                        <div>Description: small is 2$</div>
+                                        <div>Description: med is 2.5$</div>
+                                        <div>Description: large is 3$</div>
+                                        {{--                                        <a href="#" class="btn btn-primary">--}}
+                                        {{--                                            Primary button--}}
+                                        {{--                                        </a>--}}
+                                        <img src="../resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="container px-4 py-5" id="hanging-icons">
+                            <h2 class="pb-2 border-bottom">Turkberry Products</h2>
+                            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                                <div class="col d-flex align-items-start">
+                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
+                                    </div>
+                                    <div>
+                                        <div class="fs-2">Frozen Treats</div>
+                                        <div class="fs-2">Frozen Yogurt</div>
+                                        <div>Description: small is 2$</div>
+                                        <div>Description: med is 2.5$</div>
+                                        <div>Description: large is 3$</div>
+                                        {{--                                        <a href="#" class="btn btn-primary">--}}
+                                        {{--                                            Primary button--}}
+                                        {{--                                        </a>--}}
+                                        <img src="../resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
+                                    </div>
+                                    <div>
+                                        <div class="fs-2">Frozen Treats</div>
+                                        <div class="fs-2">Frozen Yogurt</div>
+                                        <div>Description: small is 2$</div>
+                                        <div>Description: med is 2.5$</div>
+                                        <div>Description: large is 3$</div>
+                                        {{--                                        <a href="#" class="btn btn-primary">--}}
+                                        {{--                                            Primary button--}}
+                                        {{--                                        </a>--}}
+                                        <img src="../resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"></use></svg>
+                                    </div>
+                                    <div>
+                                        <div class="fs-2">Frozen Treats</div>
+                                        <div class="fs-2">Frozen Yogurt</div>
+                                        <div>Description: small is 2$</div>
+                                        <div>Description: med is 2.5$</div>
+                                        <div>Description: large is 3$</div>
+                                        {{--                                        <a href="#" class="btn btn-primary">--}}
+                                        {{--                                            Primary button--}}
+                                        {{--                                        </a>--}}
+                                        <img src="../resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 @endsection
