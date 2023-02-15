@@ -252,28 +252,28 @@ class VarietySeeder extends Seeder
             'description' => '',
             'image' => '',
             'availability' => true,
-            'type' => 'Milkshake',
+            'header' => 5,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Milk Chocolate',
             'availability' => true,
-            'type' => 'Milkshake',
+            'header' => 5,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Dark Chocolate',
             'availability' => true,
-            'type' => 'Milkshake',
+            'header' => 5,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Strawberry',
             'availability' => true,
-            'type' => 'Milkshake',
+            'header' => 5,
             'stock' => true
         ]);
 
@@ -282,7 +282,7 @@ class VarietySeeder extends Seeder
             'description' => '',
             'image' => '',
             'availability' => true,
-            'type' => 'Milkshake',
+            'header' => 5,
             'stock' => true
         ]);
 
@@ -291,7 +291,7 @@ class VarietySeeder extends Seeder
             'description' => '',
             'image' => '',
             'availability' => true,
-            'type' => 'Hurricane',
+            'header' => 6,
             'stock' => true
         ]);
 
@@ -300,7 +300,7 @@ class VarietySeeder extends Seeder
             'description' => '',
             'image' => '',
             'availability' => true,
-            'type' => 'Hurricane',
+            'header' => 6,
             'stock' => true
         ]);
 
@@ -309,7 +309,7 @@ class VarietySeeder extends Seeder
             'description' => '',
             'image' => '',
             'availability' => true,
-            'type' => 'Hurricane',
+            'header' => 6,
             'stock' => true
         ]);
 
@@ -318,7 +318,7 @@ class VarietySeeder extends Seeder
             'description' => '',
             'image' => '',
             'availability' => true,
-            'type' => 'Hurricane',
+            'header' => 6,
             'stock' => true
         ]);
 
@@ -327,7 +327,7 @@ class VarietySeeder extends Seeder
             'description' => '',
             'image' => '',
             'availability' => true,
-            'type' => 'Hurricane',
+            'header' => 6,
             'stock' => true
         ]);
 
@@ -336,91 +336,91 @@ class VarietySeeder extends Seeder
             'description' => '',
             'image' => '',
             'availability' => false,
-            'type' => 'Hurricane',
+            'header' => 6,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Powdered Sugar',
             'availability' => true,
-            'type' => 'Coating',
+            'header' => 9,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Cinnamon Sugar',
             'availability' => true,
-            'type' => 'Coating',
+            'header' =>9,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Chocolate',
             'availability' => true,
-            'type' => 'Coating',
+            'header' =>9,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Vanilla',
             'availability' => true,
-            'type' => 'Coating',
+            'header' =>9,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Caramel',
             'availability' => true,
-            'type' => 'Coating',
+            'header' =>9,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Maple',
             'availability' => true,
-            'type' => 'Coating',
+            'header' => 9,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Glaze',
             'availability' => true,
-            'type' => 'Coating',
+            'header' => 9,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Strawberry',
             'availability' => true,
-            'type' => 'Coating',
+            'header' => 9,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Lemon',
             'availability' => true,
-            'type' => 'Coating',
+            'header' => 9,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Key Lime',
             'availability' => true,
-            'type' => 'Coating',
+            'header' => 9,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Cherry',
             'availability' => true,
-            'type' => 'Coating',
+            'header' => 9,
             'stock' => true
         ]);
 
         DB::table('varieties')->insert([
             'name' => 'Blueberry',
             'availability' => true,
-            'type' => 'Coating',
+            'header' => 9,
             'stock' => true
         ]);
 
