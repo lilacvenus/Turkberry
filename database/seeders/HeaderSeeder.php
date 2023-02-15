@@ -16,23 +16,28 @@ class HeaderSeeder extends Seeder
     public function run()
     {
         DB::table('headers')->insert([
-            'type' => 'Soft Drinks',
+            'name' => 'Soft Drinks',
+            'group' => 1,
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Beer',
+            'name' => 'Beer',
+            'group' => 1,
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Wine',
+            'name' => 'Wine',
+            'group' => 1,
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Frozen Yogurt',
+            'name' => 'Frozen Yogurt',
+            'group' => 2,
         ]);
 
         DB::table('headers')->insert([
-            'type' => 'Milkshake',
+            'name' => 'Milkshake',
+            'group' => 2,
         ]);
 
         DB::table('headers')->insert([

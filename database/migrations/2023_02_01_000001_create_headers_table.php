@@ -15,7 +15,8 @@ return new class extends Migration
     {
         Schema::create('headers', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->string('name');
+            $table->foreignId('group')->references('id')->on('groups');
             $table->timestamps();
         });
     }

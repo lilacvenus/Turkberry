@@ -22,7 +22,7 @@ class ProductSeeder extends Seeder
             'price' => 5.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Beer',
+            'header' => 2,
             'stock' => true
         ]);
 
@@ -32,7 +32,7 @@ class ProductSeeder extends Seeder
             'price' => 6.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Beer',
+            'header' => 2,
             'stock' => true
         ]);
 
@@ -42,7 +42,7 @@ class ProductSeeder extends Seeder
             'price' => 6.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Beer',
+            'header' => 2,
             'stock' => true
         ]);
 
@@ -52,7 +52,7 @@ class ProductSeeder extends Seeder
             'price' => 6.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Beer',
+            'header' => 2,
             'stock' => true
         ]);
 
@@ -62,7 +62,7 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
+            'header' => 1,
             'stock' => true
         ]);
 
@@ -72,7 +72,7 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
+            'header' => 1,
             'stock' => true
         ]);
 
@@ -82,7 +82,7 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
+            'header' => 1,
             'stock' => true
         ]);
 
@@ -92,7 +92,7 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
+            'header' => 1,
             'stock' => true
         ]);
 
@@ -102,7 +102,7 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
+            'header' => 1,
             'stock' => true
         ]);
 
@@ -112,7 +112,7 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
+            'header' => 1,
             'stock' => true
         ]);
 
@@ -122,7 +122,7 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
+            'header' => 1,
             'stock' => true
         ]);
 
@@ -132,7 +132,7 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
+            'header' => 1,
             'stock' => true
         ]);
 
@@ -142,7 +142,7 @@ class ProductSeeder extends Seeder
             'price' => 8.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Wine',
+            'header' => 3,
             'stock' => true
         ]);
 
@@ -152,7 +152,7 @@ class ProductSeeder extends Seeder
             'price' => 8.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Wine',
+            'header' => 3,
             'stock' => true
         ]);
     }

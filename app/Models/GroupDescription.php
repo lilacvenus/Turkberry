@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class GroupDescription extends Model
 {
     use HasFactory;
+
+    function groups() {
+        return $this->belongsTo(Group::class);
+    }
 }

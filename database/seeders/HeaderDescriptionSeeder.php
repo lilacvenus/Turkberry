@@ -16,7 +16,7 @@ class HeaderDescriptionSeeder extends Seeder
     public function run()
     {
         DB::table('header_descriptions')->insert([
-            'type' => 'Frozen Yogurt',
+            'header' => 4,
             'details' => 'Mini - $4.00',
         ]);
 
@@ -26,27 +26,27 @@ class HeaderDescriptionSeeder extends Seeder
         ]);
 
         DB::table('header_descriptions')->insert([
-            'type' => 'Frozen Yogurt',
+            'header' => 4,
             'details' => 'Medium - $6.00',
         ]);
 
         DB::table('header_descriptions')->insert([
-            'type' => 'Frozen Yogurt',
+            'header' => 4,
             'details' => 'Large - $9.00',
         ]);
 
         DB::table('header_descriptions')->insert([
-            'type' => 'Frozen Yogurt',
+            'header' => 4,
             'details' => 'Cone - $4.50',
         ]);
 
         DB::table('header_descriptions')->insert([
-            'type' => 'Frozen Yogurt',
+            'header' => 4,
             'details' => 'Pint - $10.00',
         ]);
 
         DB::table('header_descriptions')->insert([
-            'type' => 'Milkshake',
+            'header' => 5,
             'details' => 'Regular - $12.00',
             'image' => 'resources/turkberry-assets/Milkshakes/milkshakes.png',
         ]);
@@ -127,12 +127,12 @@ class HeaderDescriptionSeeder extends Seeder
         ]);
 
         DB::table('header_descriptions')->insert([
-            'type' => 'Other',
+            'header' => 13,
             'details' => 'Soy / Almond Milk - $0.50',
         ]);
 
         DB::table('header_descriptions')->insert([
-            'type' => 'Other',
+            'header' => 13,
             'details' => 'Flavor Shots - $0.50',
         ]);
     }

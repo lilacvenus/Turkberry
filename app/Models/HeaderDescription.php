@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class HeaderDescription extends Model
 {
     use HasFactory;
+
+    function header() {
+        return $this->belongsTo(Header::class);
+    }
 }

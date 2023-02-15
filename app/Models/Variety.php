@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Variety extends Model
 {
     use HasFactory;
+
+    function header(){
+        return $this->belongsToMany(Header::class);
+    }
 }
