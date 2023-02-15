@@ -13,9 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('headers', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
+            $table->string('name');
+            $table->string('description');
+            $table->decimal('price');
+            $table->string('image');
+            $table->boolean('availability');
+            $table->foreignId('header')->references('id')->on('headers');
+            $table->boolean('stock');
             $table->timestamps();
         });
     }
@@ -27,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('headers');
+        Schema::dropIfExists('products');
     }
 };

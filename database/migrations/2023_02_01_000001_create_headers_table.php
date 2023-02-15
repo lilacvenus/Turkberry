@@ -13,14 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('varieties', function (Blueprint $table) {
+        Schema::create('headers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description')->nullable();
-            $table->string('image')->nullable();
-            $table->boolean('availability');
-            $table->string('type')->references('type')->on('headers');
-            $table->boolean('stock');
+            $table->foreignId('group')->references('id')->on('groups');
             $table->timestamps();
         });
     }
@@ -32,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('varieties');
+        Schema::dropIfExists('headers');
     }
 };

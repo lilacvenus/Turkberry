@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('groups', function (Blueprint $table) {
+        Schema::create('header_descriptions', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('header');
+            $table->foreignId('header')->references('id')->on('headers');
+            $table->string('details')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('groups');
+        Schema::dropIfExists('header_descriptions');
     }
 };

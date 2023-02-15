@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('stores', function (Blueprint $table) {
+        Schema::create('group_descriptions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('prod_id');
-            $table->string('store');
-            $table->boolean('availability');
-            $table->boolean('stock');
+            $table->foreignId('group')->references('id')->on('groups');
+            $table->string('details')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('stores');
+        Schema::dropIfExists('group_descriptions');
     }
 };

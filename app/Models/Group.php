@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Group extends Model
 {
     use HasFactory;
+
+    function headers() {
+        return $this->hasMany(Header::class);
+    }
+
+    function description() {
+        return $this->hasMany(GroupDescription::class);
+    }
+
 }

@@ -13,12 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('header_descriptions', function (Blueprint $table) {
+        Schema::create('stores', function (Blueprint $table) {
             $table->id();
-            $table->string('type');
-            $table->string('details')->nullable();
-            $table->string('image')->nullable();
-            $table->timestamps();
+            $table->foreignId('prod_id');
+            $table->string('store');
+            $table->boolean('availability');
+            $table->boolean('stock');
+
+            $table->foreign('prod_id')->references('id')->on('products');
+
         });
     }
 
@@ -29,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('header_descriptions');
+        Schema::dropIfExists('stores');
     }
 };
