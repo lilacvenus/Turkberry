@@ -20,7 +20,7 @@ return new class extends Migration
             $table->decimal('price');
             $table->string('image');
             $table->boolean('availability');
-            $table->string('type');
+            $table->foreignId('header')->references('id')->on('headers');
             $table->boolean('stock');
             $table->timestamps();
         });
