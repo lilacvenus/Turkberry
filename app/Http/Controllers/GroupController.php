@@ -3,7 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Group;
+use App\Models\GroupDescription;
+use App\Models\Header;
+use App\Models\HeaderDescription;
+use App\Models\Product;
+use App\Models\Variety;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class GroupController extends Controller
 {
