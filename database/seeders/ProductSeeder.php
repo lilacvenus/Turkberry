@@ -23,7 +23,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 2,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -33,7 +34,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 2,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -43,7 +45,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 2,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -53,7 +56,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 2,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -63,7 +67,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 1,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -73,7 +78,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 1,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -83,7 +89,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 1,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -93,7 +100,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 1,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -103,7 +111,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 1,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -113,7 +122,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 1,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -123,7 +133,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 1,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -133,7 +144,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 1,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -143,7 +155,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 3,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -153,7 +166,8 @@ class ProductSeeder extends Seeder
             'image' => '',
             'availability' => true,
             'header' => 3,
-            'stock' => true
+            'stock' => true,
+            'created_by' => 6,
         ]);
     }
 }
