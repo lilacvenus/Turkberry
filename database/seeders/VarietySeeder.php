@@ -17,7 +17,7 @@ class VarietySeeder extends Seeder
     {
         DB::table('varieties')->insert([
             'name' => 'Almond',
-            'image' => 'public/turkberry-assets/flavors/Almond.png',
+            'image' => 'turkberry-assets/flavors/Almond.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -44,7 +44,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Birthday Cake',
-            'image' => 'turkberry-assets/flavors/Birthday-Cake.png',
+            'image' => 'turkberry-assets/flavors-page/Birthday-Cupcake.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -269,7 +269,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Venetian Cream',
-            'image' => 'urkberry-assets/flavors/Venetian-Cream.png',
+            'image' => 'turkberry-assets/flavors/Venetian-Cream.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
