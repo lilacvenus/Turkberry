@@ -31,14 +31,14 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ redirect('products.index') }}">{{ __('Products') }}</a>
+                            <a class="btn btn-primary" href="{{ route('products.index') }}">{{ __('Products') }}</a>
                         </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ redirect('admins.index') }}">{{ __('Admins') }}</a>
+                            <a class="nav-link"  href="{{ redirect('admins.index') }}">{{ __('Admins') }}</a>
                         </li>
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">

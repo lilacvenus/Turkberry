@@ -63,6 +63,7 @@ class ProductController extends Controller
     public function create()
     {
         //
+        return view('products.create');
     }
 
     /**
@@ -108,6 +109,7 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         //
+        return view('products.edit');
     }
 
     /**
