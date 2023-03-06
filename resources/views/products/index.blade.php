@@ -48,7 +48,7 @@ header description
                                         <div class="d-flex flex-row justify-content-around">
 
                                             @foreach($groupdescriptions as $groupdescription )
-                                                @if($groupdescription->group == 3)
+                                                @if($groupdescription->group == $group->id)
                                                     <div class="text-center">{{$groupdescription->description}}</div>
                                                 @endif
                                             @endforeach
@@ -59,28 +59,51 @@ header description
                                                     @if( $headerdescription->header == $header->id )
                                                         <div class="text-center">{{$headerdescription->details}}</div>
                                                     @endif
+
+
                                                 @endforeach
                                             </div>
+                                                <div class="row row-cols-1 row-cols-lg-3 w-100">
+                                                    @foreach($products as $product)
+                                                        @if( $product->header == $header->id )
+                                                            <div class="text-center">{{$product->name}}</div>
+                                                        @endif
+                                                    @endforeach
+                                                </div>
 
+
+
+                                                <div class="row row-cols-1 row-cols-lg-3 w-100">
+                                                    @foreach($varieties as $variety)
+                                                        @if( $variety->header == $header->id )
+                                                            <div class="text-center">{{$variety->name}}</div>
+                                                        @endif
+                                                    @endforeach
+                                                </div>
                                     @endif
 
 
 
 
 
-                                            {{--                                    <div class="row row-cols-1 row-cols-lg-3 w-100">--}}
-{{--                                        @foreach($varieties as $variety)--}}
-{{--                                        <div class="text-center">{{$variety->name}}</div>--}}
-{{--                                        @endforeach--}}
-{{--                                            $varieties--}}
-{{--                                    </div>--}}
+
+
+
+
+
+{{--
+                                    </div>
 {{--                                    <div class="row row-cols-1 row-cols-lg-3 w-100">--}}
 {{--                                        @foreach($products as $product)--}}
 {{--                                        <div class="text-center">{{$product->name}}</div>--}}
 {{--                                        @endforeach--}}
-{{--                                            $products--}}
 
-{{--                                    </div>--}}
+
+
+
+
+
+
                                 </div>
                                 @endforeach
 {{--                                headers--}}
