@@ -53,6 +53,9 @@
                                                     @foreach($varieties as $variety)
                                                         @if( $variety->header == $header->id )
                                                             <div class="text-center">{{$variety->name}}</div>
+                                                            @if($variety->image !=null)
+                                                                <img src="{{ URL::asset($variety->image) }}" alt={{$variety->name}}>
+                                                            @endif
                                                         @endif
                                                     @endforeach
                                                 </div>

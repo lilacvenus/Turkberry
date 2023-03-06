@@ -17,7 +17,7 @@ class VarietySeeder extends Seeder
     {
         DB::table('varieties')->insert([
             'name' => 'Almond',
-            'image' => 'resources/turkberry-assets/flavors/Almond.png',
+            'image' => 'public/turkberry-assets/flavors/Almond.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -26,7 +26,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Amaretto',
-            'image' => 'resources/turkberry-assets/flavors/Amaretto.png',
+            'image' => 'turkberry-assets/flavors/Amaretto.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -35,7 +35,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Banana Cream',
-            'image' => 'resources/turkberry-assets/flavors/Banana-Cream.png',
+            'image' => 'turkberry-assets/flavors/Banana-Cream.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -44,7 +44,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Birthday Cake',
-            'image' => 'resources/turkberry-assets/flavors/Birthday-Cake.png',
+            'image' => 'turkberry-assets/flavors/Birthday-Cake.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -53,7 +53,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Bubble Gum',
-            'image' => 'resources/turkberry-assets/flavors/Bubble-Gum.png',
+            'image' => 'turkberry-assets/flavors/Bubble-Gum.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -62,7 +62,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Cappuccino',
-            'image' => 'resources/turkberry-assets/flavors/Cappuccino.png',
+            'image' => 'turkberry-assets/flavors/Cappuccino.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -71,7 +71,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Cheesecake',
-            'image' => 'resources/turkberry-assets/flavors/Cheesecake.png',
+            'image' => 'turkberry-assets/flavors/Cheesecake.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -80,7 +80,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Chocolate',
-            'image' => 'resources/turkberry-assets/flavors/Chocolate.png',
+            'image' => 'turkberry-assets/flavors/Chocolate.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -89,7 +89,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Coco Loco',
-            'image' => 'resources/turkberry-assets/flavors/Coco-Loco.png',
+            'image' => 'turkberry-assets/flavors/Coco-Loco.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -98,7 +98,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Creamsicle',
-            'image' => 'resources/turkberry-assets/flavors/Creamsicle.png',
+            'image' => 'turkberry-assets/flavors/Creamsicle.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -107,7 +107,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Forest Berries',
-            'image' => 'resources/turkberry-assets/flavors/Forest-Berries.png',
+            'image' => 'turkberry-assets/flavors/Forest-Berries.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -116,7 +116,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Green Apple',
-            'image' => 'resources/turkberry-assets/flavors/Green-Apple.png',
+            'image' => 'turkberry-assets/flavors/Green-Apple.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -125,7 +125,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Green Tea',
-            'image' => 'resources/turkberry-assets/flavors/Green-Tea.png',
+            'image' => 'turkberry-assets/flavors/Green-Tea.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -134,7 +134,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Lemon',
-            'image' => 'resources/turkberry-assets/flavors/Lemon.png',
+            'image' => 'turkberry-assets/flavors/Lemon.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -143,7 +143,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Lime',
-            'image' => 'resources/turkberry-assets/flavors/Lime.png',
+            'image' => 'turkberry-assets/flavors/Lime.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -152,7 +152,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Mango Tango',
-            'image' => 'resources/turkberry-assets/flavors/Mango-Tango.png',
+            'image' => 'turkberry-assets/flavors/Mango-Tango.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -161,7 +161,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Mint Chocolate',
-            'image' => 'resources/turkberry-assets/flavors/Mint-Chocolate.png',
+            'image' => 'turkberry-assets/flavors/Mint-Chocolate.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -170,7 +170,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Nutella',
-            'image' => 'resources/turkberry-assets/flavors/Nutella.png',
+            'image' => 'turkberry-assets/flavors/Nutella.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -179,7 +179,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Original Bight',
-            'image' => 'resources/turkberry-assets/flavors/Original-Bight.png',
+            'image' => 'turkberry-assets/flavors/Original-Bight.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -188,7 +188,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Peach Mango',
-            'image' => 'resources/turkberry-assets/flavors/Peach-Mango.png',
+            'image' => 'turkberry-assets/flavors/Peach-Mango.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -197,7 +197,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Peppermint Pattie',
-            'image' => 'resources/turkberry-assets/flavors/Peppermint-Pattie.png',
+            'image' => 'turkberry-assets/flavors/Peppermint-Pattie.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -206,7 +206,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Pineapple',
-            'image' => 'resources/turkberry-assets/flavors/Pineapple.png',
+            'image' => 'turkberry-assets/flavors/Pineapple.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -215,7 +215,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Pumpkin Spice',
-            'image' => 'resources/turkberry-assets/flavors/Pumpkin-Spice.png',
+            'image' => 'turkberry-assets/flavors/Pumpkin-Spice.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -224,7 +224,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Raspberry',
-            'image' => 'resources/turkberry-assets/flavors/Raspberry.png',
+            'image' => 'turkberry-assets/flavors/Raspberry.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -233,7 +233,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Red Velvet',
-            'image' => 'resources/turkberry-assets/flavors/Red-Velvet.png',
+            'image' => 'turkberry-assets/flavors/Red-Velvet.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -242,7 +242,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Salted Caramel',
-            'image' => 'resources/turkberry-assets/flavors/Salted-Caramel.png',
+            'image' => 'turkberry-assets/flavors/Salted-Caramel.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -251,7 +251,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Strawberry',
-            'image' => 'resources/turkberry-assets/flavors/Strawberry.png',
+            'image' => 'turkberry-assets/flavors/Strawberry.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -260,7 +260,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Sweet Watermelon',
-            'image' => 'resources/turkberry-assets/flavors/Sweet-Watermelon.png',
+            'image' => 'turkberry-assets/flavors/Sweet-Watermelon.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
@@ -269,7 +269,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Venetian Cream',
-            'image' => 'resources/turkberry-assets/flavors/Venetian-Cream.png',
+            'image' => 'urkberry-assets/flavors/Venetian-Cream.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
