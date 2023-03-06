@@ -35,4 +35,8 @@ Route::get('/admins/edit', function () {
     return view('admins.edit');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
+
 Route::resource('products',ProductController::class);

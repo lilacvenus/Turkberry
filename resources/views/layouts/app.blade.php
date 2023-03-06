@@ -42,7 +42,8 @@
                         </li>
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ redirect('About Us') }}">{{ __('About Us') }}</a>
+                                <a class="nav-link"  href="{{ url('/about') }}">About Us</a>
+{{--                                <a class="nav-link" href="{{ redirect('about') }}">{{ __('About Us') }}</a>--}}
                             </li>
 
                         <!-- Authentication Links -->
@@ -88,5 +89,16 @@
     </div>
 </body>
 
+<section class="">
+    <!-- Footer -->
+    <footer class="bg-secondary text-white text-center" >
 
+        <div class="text-center p-3" style="background-color: rgba(0, 217, 213);">
+            © 2020 Copyright:
+            <a class="text-white" href="{{ url('/') }}">TurkBerry</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</section>
 </html>
