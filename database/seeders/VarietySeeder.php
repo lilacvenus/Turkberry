@@ -42,14 +42,15 @@ class VarietySeeder extends Seeder
             'created_by' => 6,
         ]);
 
-        DB::table('varieties')->insert([
-            'name' => 'Birthday Cake',
-            'image' => 'turkberry-assets/flavors-page/Birthday-Cupcake.png',
-            'availability' => true,
-            'header' => 4,
-            'stock' => true,
-            'created_by' => 6,
-        ]);
+        //REMOVED CAUSE IMAGE IS DIFFERENT SIZE
+//        DB::table('varieties')->insert([
+//            'name' => 'Birthday Cake',
+//            'image' => 'turkberry-assets/flavors-page/Birthday-Cupcake.png',
+//            'availability' => true,
+//            'header' => 4,
+//            'stock' => true,
+//            'created_by' => 6,
+//        ]);
 
         DB::table('varieties')->insert([
             'name' => 'Bubble Gum',

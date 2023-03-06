@@ -25,7 +25,7 @@
                     <h3>{{$group->name}}</h3>
                 </div>
                         <div class="card-body">
-                            <div class="container px-4" id="hanging-icons">
+                            <div class="container px-4 " id="hanging-icons">
                                 @foreach($headers as $header )
                                     @if( $group->id == $header->group)
                                         <h4 class="pb-2 border-bottom text-center mt-3">{{$header->name}}</h4>
@@ -61,15 +61,19 @@
                                                         @endif
                                                     @endforeach
                                                 </div>
+
                                     @endif
 
 
                                 @endforeach
+
                             </div>
+
                         </div>
-                        </div>
-                        </div>
+
                 @endforeach
+                        </div>
+            </div>
         </div>
     </div>
 {{--    the outer card--}}
