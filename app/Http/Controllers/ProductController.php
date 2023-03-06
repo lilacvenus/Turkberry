@@ -25,18 +25,22 @@ class ProductController extends Controller
             $varieties = Variety::orderBy('header')->get();
             $headers = Header::orderBy('group')->get();
             $groups = Group::orderBy('id')->get();
-        } else {
+//            dd($groups);
+        }
+        else {
             $products = Product::orderBy('header')->where('availability', '=', true)->get();
             $varieties = Variety::orderBy('header')->where('availability', '=', true)->get();
             $productheader = Header::orderBy('group')->leftjoin('products', 'headers.id', '=', 'products.header')->where('products.availability', '=', '1')->select('headers.*');
             $headers = Header::orderBy('group')->leftjoin('varieties', 'headers.id', '=', 'varieties.header')->where('varieties.availability', '=', '1')->select('headers.*')->union($productheader);
             $groups = Group::orderBy('id')->joinSub($headers, 'headers', function ($join) {
                 $join->on('groups.id', '=', 'headers.group');
-            })->select('groups.*')->get();
+            })->select('groups.*')->distinct()->get();
             $headers = $headers->get();
         }
         $headerdescriptions = HeaderDescription::orderBy('header')->get();
         $groupdescriptions = GroupDescription::orderBy('group')->get();
+//       dd($groupdescriptions,$groups);
+//        dd($headers);
         return view('products.index', compact('products', 'varieties' , 'headers', 'headerdescriptions', 'groups', 'groupdescriptions'));
     }
 

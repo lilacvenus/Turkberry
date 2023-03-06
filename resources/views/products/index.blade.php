@@ -3,6 +3,20 @@
 @extends('layouts.app')
 
 @section('content')
+
+
+
+{{--
+groups
+group description
+headers
+header description
+
+
+
+
+--}}
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -15,34 +29,67 @@
                     </div>
                 </div>
                 @endif
-{{--                @foreach(group in groups)--}}
-                <div class="card-header"><h3 class="text-center">{{ __('Frozen Treats') }}</h3></div>
+
+{{--                    {{dd($groups)}}--}}
+                @foreach($groups as $group)
+                        <div class="card">
+
+                <div class="card-header">
+{{--                    <h3 class="text-center">{{ __($group->name) }}</h3>--}}
+                    <h3>{{$group->name}}</h3>
+
+                </div>
+
                         <div class="card-body">
                             <div class="container px-4" id="hanging-icons">
-{{--                                @foreach(header in headers)--}}
-                                <h4 class="pb-2 border-bottom text-center">Frozen Yogurt</h4>
-                                <div class="d-flex flex-row justify-content-around">
-                                    <div class="row row-cols-1 row-cols-lg-3 w-100">
-{{--                                        @foreach(headerdescription in headerdescriptions)--}}
-                                        <div class="text-center">Small: $2.00</div>
+                                @foreach($headers as $header )
+                                    @if( $group->id == $header->group)
+                                        <h4 class="pb-2 border-bottom text-center">{{$header->name}}</h4>
+                                        <div class="d-flex flex-row justify-content-around">
+
+                                            @foreach($groupdescriptions as $groupdescription )
+                                                @if($groupdescription->group == 3)
+                                                    <div class="text-center">{{$groupdescription->description}}</div>
+                                                @endif
+                                            @endforeach
+
+
+                                            <div class="row row-cols-1 row-cols-lg-3 w-100">
+                                                @foreach($headerdescriptions as $headerdescription)
+                                                    @if( $headerdescription->header == $header->id )
+                                                        <div class="text-center">{{$headerdescription->details}}</div>
+                                                    @endif
+                                                @endforeach
+                                            </div>
+
+                                    @endif
+
+
+
+
+
+                                            {{--                                    <div class="row row-cols-1 row-cols-lg-3 w-100">--}}
+{{--                                        @foreach($varieties as $variety)--}}
+{{--                                        <div class="text-center">{{$variety->name}}</div>--}}
 {{--                                        @endforeach--}}
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-lg-3 w-100">
-{{--                                        @foreach(variety in varieties)--}}
-                                        <div class="text-center">Small: $2.00</div>
+{{--                                            $varieties--}}
+{{--                                    </div>--}}
+{{--                                    <div class="row row-cols-1 row-cols-lg-3 w-100">--}}
+{{--                                        @foreach($products as $product)--}}
+{{--                                        <div class="text-center">{{$product->name}}</div>--}}
 {{--                                        @endforeach--}}
-                                    </div>
-                                    <div class="row row-cols-1 row-cols-lg-3 w-100">
-{{--                                        @foreach(product in products)--}}
-                                        <div class="text-center">Small: $2.00</div>
-{{--                                        @endforeach--}}
-                                    </div>
+{{--                                            $products--}}
+
+{{--                                    </div>--}}
                                 </div>
-{{--                                @endforeach--}}
+                                @endforeach
+{{--                                headers--}}
                             </div>
                         </div>
             </div>
-{{--                @endforeach--}}
+                        </div>
+                @endforeach
+{{--            groups--}}
         </div>
     </div>
 </div>
