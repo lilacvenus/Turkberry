@@ -31,8 +31,9 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 |
 */
 
-require __DIR__.'/../vendor/autoload.php';
-
+require_once __DIR__.'/../vendor/autoload.php';
+$var = require_once __DIR__.'/../vendor/autoload.php';
+var_dump( $var);
 /*
 |--------------------------------------------------------------------------
 | Run The Application
@@ -53,3 +54,4 @@ $response = $kernel->handle(
 )->send();
 
 $kernel->terminate($request, $response);
+
