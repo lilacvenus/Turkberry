@@ -15,56 +15,83 @@ class HeaderSeeder extends Seeder
      */
     public function run()
     {
+        //1
         DB::table('headers')->insert([
-            'type' => 'Soft Drinks',
+            'name' => 'Soft Drinks',
+            'group' => 1,
+            'created_by' => 6,
         ]);
-
+        //2
         DB::table('headers')->insert([
-            'type' => 'Beer',
+            'name' => 'Beer',
+            'group' => 1,
+            'created_by' => 6,
         ]);
-
+        //3
         DB::table('headers')->insert([
-            'type' => 'Wine',
+            'name' => 'Wine',
+            'group' => 1,
+            'created_by' => 6,
         ]);
-
+        //4
         DB::table('headers')->insert([
-            'type' => 'Frozen Yogurt',
+            'name' => 'Frozen Yogurt',
+            'group' => 2,
+            'created_by' => 6,
         ]);
-
+        //5
         DB::table('headers')->insert([
-            'type' => 'Milkshake',
+            'name' => 'Milkshake',
+            'group' => 2,
+            'created_by' => 6,
         ]);
-
+        //6
         DB::table('headers')->insert([
-            'type' => 'Hurricane',
+            'name' => 'Hurricane',
+            'group' => 2,
+            'created_by' => 6,
         ]);
-
+        //7
         DB::table('headers')->insert([
-            'type' => 'Drizzle',
+            'name' => 'Drizzle',
+            'group' => 3,
+            'created_by' => 6,
         ]);
-
+        //8
         DB::table('headers')->insert([
-            'type' => 'Topping',
+            'name' => 'Topping',
+            'group' => 3,
+            'created_by' => 6,
         ]);
-
+        //9
         DB::table('headers')->insert([
-            'type' => 'Coating',
+            'name' => 'Coating',
+            'group' => 3,
+            'created_by' => 6,
         ]);
-
+        //10
         DB::table('headers')->insert([
-            'type' => 'Brewed',
+            'name' => 'Brewed',
+            'group' => 4,
+            'created_by' => 6,
         ]);
-
+        //11
         DB::table('headers')->insert([
-            'type' => 'Latte',
+            'name' => 'Latte',
+            'group' => 4,
+            'created_by' => 6,
         ]);
-
+        //12
         DB::table('headers')->insert([
-            'type' => 'Cappuccino',
+            'name' => 'Cappuccino',
+            'group' => 4,
+            'created_by' => 6,
         ]);
-
+        //13
         DB::table('headers')->insert([
-            'type' => 'Other',
+            'name' => 'Other',
+            'group' => 4,
+            'created_by' => 6,
         ]);
     }
 }

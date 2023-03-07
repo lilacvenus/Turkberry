@@ -3,163 +3,79 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Product') }}</div>
-
+                @if (session('status'))
+                <div class="card-header">{{ __('Status Message') }}</div>
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
+                </div>
+                @endif
 
-                        <div class="container px-4 py-5" id="hanging-icons">
-                            <h4 class="pb-2 border-bottom">Group: Header Here</h4>
-                            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                                <div class="col d-flex align-items-start">
-                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-                                    </div>
-                                    <div>
-                                        <div class="fs-4">Frozen Treats</div>
-                                        <div class="fs-4">Frozen Yogurt</div>
-                                        <img src="./resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
-                                        <div>Description: small is 2$</div>
-                                        <div>Description: med is 2.5$</div>
-                                        <div>Description: large is 3$</div>
-                                        <div>Varieties :0</div>
-                                    </div>
-                                </div>
-                                <div class="col d-flex align-items-start">
-                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
-                                    </div>
-                                    <div>
-                                        <div class="fs-4">Frozen Treats</div>
-                                        <div class="fs-4">Frozen Yogurt</div>
-                                        <img src="./resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
-                                        <div>Description: small is 2$</div>
-                                        <div>Description: med is 2.5$</div>
-                                        <div>Description: large is 3$</div>
-                                        <div>Varieties :0</div>
-                                    </div>
-                                </div>
-                                <div class="col d-flex align-items-start">
-                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"></use></svg>
-                                    </div>
-                                    <div>
-                                        <div class="fs-4">Frozen Treats</div>
-                                        <div class="fs-4">Frozen Yogurt</div>
-                                        <img src="./resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
-                                        <div>Description: small is 2$</div>
-                                        <div>Description: med is 2.5$</div>
-                                        <div>Description: large is 3$</div>
-                                        <div>Varieties :0</div>
-                                    </div>
-                                </div>
+                @foreach($groups as $group)
+                        <div class="card">
+
+                <div class="card-header">
+                    <h3>{{$group->name}}</h3>
+                </div>
+                        <div class="card-body">
+                            <div class="container px-4 " id="hanging-icons">
+                                @foreach($headers as $header )
+                                    @if( $group->id == $header->group)
+                                        <h4 class="pb-2 border-bottom text-center mt-3">{{$header->name}}</h4>
+                                            @foreach($groupdescriptions as $groupdescription )
+                                                @if($groupdescription->group == $group->id)
+                                                    <div class="text-center">{{$groupdescription->description}}</div>
+                                                @endif
+                                            @endforeach
+                                            <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3">
+                                                @foreach($headerdescriptions as $headerdescription)
+                                                    @if( $headerdescription->header == $header->id )
+                                                        <div class="text-center">{{$headerdescription->details}}</div>
+                                                    @endif
+                                                @endforeach
+{{--                                            </div>--}}
+
+                                                <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3 ">
+                                                    @foreach($products as $product)
+                                                        @if( $product->header == $header->id )
+                                                            <div class="text-center">{{$product->name}}</div>
+                                                        @endif
+                                                    @endforeach
+                                                </div>
+{{--                                                <div class="row row-cols-1 row-cols-lg-3 w-100">--}}
+                                                    @foreach($varieties as $variety)
+                                                        @if( $variety->header == $header->id )
+                                                            @if($variety->image ==null)
+                                                            <div class="text-center">{{$variety->name}}</div>
+                                                            @endif
+                                                            @if($variety->image !=null)
+                                                                <img src="{{ URL::asset($variety->image) }}" alt={{$variety->name}}>
+                                                            @endif
+                                                        @endif
+                                                    @endforeach
+                                                </div>
+
+                                    @endif
+
+
+                                @endforeach
+
                             </div>
+
                         </div>
 
-
-                        <div class="container px-4 py-5" id="hanging-icons">
-                            <h4 class="pb-2 border-bottom">Group: Header Here</h4>
-                            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                                <div class="col d-flex align-items-start">
-                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-                                    </div>
-                                    <div>
-                                        <div class="fs-4">Frozen Treats</div>
-                                        <div class="fs-4">Frozen Yogurt</div>
-                                        <img src="./resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
-                                        <div>Description: small is 2$</div>
-                                        <div>Description: med is 2.5$</div>
-                                        <div>Description: large is 3$</div>
-                                        <div>Varieties :0</div>
-                                    </div>
-                                </div>
-                                <div class="col d-flex align-items-start">
-                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
-                                    </div>
-                                    <div>
-                                        <div class="fs-4">Frozen Treats</div>
-                                        <div class="fs-4">Frozen Yogurt</div>
-                                        <img src="./resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
-                                        <div>Description: small is 2$</div>
-                                        <div>Description: med is 2.5$</div>
-                                        <div>Description: large is 3$</div>
-                                        <div>Varieties :0</div>
-                                    </div>
-                                </div>
-                                <div class="col d-flex align-items-start">
-                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"></use></svg>
-                                    </div>
-                                    <div>
-                                        <div class="fs-4">Frozen Treats</div>
-                                        <div class="fs-4">Frozen Yogurt</div>
-                                        <img src="./resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
-                                        <div>Description: small is 2$</div>
-                                        <div>Description: med is 2.5$</div>
-                                        <div>Description: large is 3$</div>
-                                        <div>Varieties :0</div>
-                                    </div>
-                                </div>
-                            </div>
+                @endforeach
                         </div>
-
-
-                        <div class="container px-4 py-5" id="hanging-icons">
-                            <h4 class="pb-2 border-bottom">Group: Header Here</h4>
-                            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                                <div class="col d-flex align-items-start">
-                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"></use></svg>
-                                    </div>
-                                    <div>
-                                        <div class="fs-4">Frozen Treats</div>
-                                        <div class="fs-4">Frozen Yogurt</div>
-                                        <img src="./resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
-                                        <div>Description: small is 2$</div>
-                                        <div>Description: med is 2.5$</div>
-                                        <div>Description: large is 3$</div>
-                                        <div>Varieties :0</div>
-                                    </div>
-                                </div>
-                                <div class="col d-flex align-items-start">
-                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"></use></svg>
-                                    </div>
-                                    <div>
-                                        <div class="fs-4">Frozen Treats</div>
-                                        <div class="fs-4">Frozen Yogurt</div>
-                                        <img src="./resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
-                                        <div>Description: small is 2$</div>
-                                        <div>Description: med is 2.5$</div>
-                                        <div>Description: large is 3$</div>
-                                        <div>Varieties :0</div>
-                                    </div>
-                                </div>
-                                <div class="col d-flex align-items-start">
-                                    <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                                        <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"></use></svg>
-                                    </div>
-                                    <div>
-                                        <div class="fs-4">Frozen Treats</div>
-                                        <div class="fs-4">Frozen Yogurt</div>
-                                        <img src="./resources/turkberry-assets/Drinks/jpg/No_Tax_Menu-2.jpg" class="img-fluid" alt="Responsive image">
-                                        <div>Description: small is 2$</div>
-                                        <div>Description: med is 2.5$</div>
-                                        <div>Description: large is 3$</div>
-                                        <div>Varieties :0</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
+            </div>
+        </div>
+    </div>
+{{--    the outer card--}}
+</div>
 @endsection

@@ -16,23 +16,27 @@ class GroupDescriptionSeeder extends Seeder
     public function run()
     {
         DB::table('group_descriptions')->insert([
-            'name' => 'Donuts',
+            'group' => 3,
             'details' => 'Individual - $2.00',
+            'created_by' => 6,
         ]);
 
         DB::table('group_descriptions')->insert([
-            'name' => 'Donuts',
+            'group' => 3,
             'details' => 'Half Dozen(6) - $10.00',
+            'created_by' => 6,
         ]);
 
         DB::table('group_descriptions')->insert([
-            'name' => 'Donuts',
+            'group' => 3,
             'details' => 'Dozen(12) - $16.00',
+            'created_by' => 6,
         ]);
 
         DB::table('group_descriptions')->insert([
-            'name' => 'Donuts',
+            'group' => 3,
             'details' => 'Office Hero - $36.00 \n(12 personalized donuts with a carafe of coffee)',
+            'created_by' => 6,
         ]);
     }
 }

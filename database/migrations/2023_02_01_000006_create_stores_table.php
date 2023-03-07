@@ -19,6 +19,14 @@ return new class extends Migration
             $table->string('store');
             $table->boolean('availability');
             $table->boolean('stock');
+            $table->foreignId('created_by');
+            $table->foreignId('updated_by')->nullable();
+            $table->foreignId('deleted_by')->nullable();
+
+            $table->foreign('prod_id')->references('id')->on('products');
+            $table->foreign('created_by')->references('id')->on('users');
+            $table->foreign('updated_by')->references('id')->on('users');
+            $table->foreign('deleted_by')->references('id')->on('users');
         });
     }
 

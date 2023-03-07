@@ -6,11 +6,32 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    public static function boot()
+    {
+        parent::boot();
+        static::creating(function($model)
+        {
+            $model->created_by = Auth::id();
+        });
+
+        static::updating(function($model)
+        {
+            $model->updated_by = Auth::id();
+        });
+
+        static::deleting(function($model)
+        {
+            $model->deleted_by = Auth::id();
+            $model->save();
+        });
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +39,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
+        'profile_picture',
+        'store',
         'email',
         'password',
     ];
