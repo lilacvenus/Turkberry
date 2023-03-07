@@ -17,82 +17,22 @@ class GroupSeeder extends Seeder
     {
         DB::table('groups')->insert([
             'name' => 'Beverages',
-            'header' => 'Soft Drink',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Beverages',
-            'header' => 'Beer',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Beverages',
-            'header' => 'Wine',
+            'created_by' => 6,
         ]);
 
         DB::table('groups')->insert([
             'name' => 'Frozen Treats',
-            'header' => 'Frozen Yogurt',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Frozen Treats',
-            'header' => 'Topping',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Frozen Treats',
-            'header' => 'Milkshake',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Frozen Treats',
-            'header' => 'Hurricane',
+            'created_by' => 6,
         ]);
 
         DB::table('groups')->insert([
             'name' => 'Donuts',
-            'header' => 'Coating',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Donuts',
-            'header' => 'Topping',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Donuts',
-            'header' => 'Drizzle',
+            'created_by' => 6,
         ]);
 
         DB::table('groups')->insert([
             'name' => 'Hot Drinks',
-            'header' => 'Coffee - Brewed',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Hot Drinks',
-            'header' => 'Coffee - Latte',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Hot Drinks',
-            'header' => 'Coffee - Cappuccino',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Hot Drinks',
-            'header' => 'Coffee - Americano',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Hot Drinks',
-            'header' => 'Coffee - Other',
-        ]);
-
-        DB::table('groups')->insert([
-            'name' => 'Hot Drinks',
-            'header' => 'Tea',
+            'created_by' => 6,
         ]);
     }
 }

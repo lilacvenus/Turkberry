@@ -22,8 +22,9 @@ class ProductSeeder extends Seeder
             'price' => 5.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Beer',
-            'stock' => true
+            'header' => 2,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -32,8 +33,9 @@ class ProductSeeder extends Seeder
             'price' => 6.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Beer',
-            'stock' => true
+            'header' => 2,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -42,8 +44,9 @@ class ProductSeeder extends Seeder
             'price' => 6.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Beer',
-            'stock' => true
+            'header' => 2,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -52,8 +55,9 @@ class ProductSeeder extends Seeder
             'price' => 6.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Beer',
-            'stock' => true
+            'header' => 2,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -62,8 +66,9 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
-            'stock' => true
+            'header' => 1,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -72,8 +77,9 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
-            'stock' => true
+            'header' => 1,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -82,8 +88,9 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
-            'stock' => true
+            'header' => 1,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -92,8 +99,9 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
-            'stock' => true
+            'header' => 1,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -102,8 +110,9 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
-            'stock' => true
+            'header' => 1,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -112,8 +121,9 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
-            'stock' => true
+            'header' => 1,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -122,8 +132,9 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
-            'stock' => true
+            'header' => 1,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -132,8 +143,9 @@ class ProductSeeder extends Seeder
             'price' => 2.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Soft Drink',
-            'stock' => true
+            'header' => 1,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -142,8 +154,9 @@ class ProductSeeder extends Seeder
             'price' => 8.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Wine',
-            'stock' => true
+            'header' => 3,
+            'stock' => true,
+            'created_by' => 6,
         ]);
 
         DB::table('products')->insert([
@@ -152,8 +165,9 @@ class ProductSeeder extends Seeder
             'price' => 8.00,
             'image' => '',
             'availability' => true,
-            'type' => 'Wine',
-            'stock' => true
+            'header' => 3,
+            'stock' => true,
+            'created_by' => 6,
         ]);
     }
 }

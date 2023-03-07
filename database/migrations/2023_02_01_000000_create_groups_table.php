@@ -13,11 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('group_descriptions', function (Blueprint $table) {
+        Schema::create('groups', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('details')->nullable();
             $table->timestamps();
+            $table->foreignId('created_by');
+            $table->foreignId('updated_by')->nullable();
+            $table->foreignId('deleted_by')->nullable();
+
+            $table->foreign('created_by')->references('id')->on('users');
+            $table->foreign('updated_by')->references('id')->on('users');
+            $table->foreign('deleted_by')->references('id')->on('users');
         });
     }
 
@@ -28,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('group_descriptions');
+        Schema::dropIfExists('groups');
     }
 };

@@ -13,18 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('group_descriptions', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('profile_picture');
-            $table->string('store');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->foreignId('group')->references('id')->on('groups');
+            $table->string('details')->nullable();
             $table->timestamps();
-            $table->foreignId('created_by')->nullable();
+            $table->foreignId('created_by');
             $table->foreignId('updated_by')->nullable();
             $table->foreignId('deleted_by')->nullable();
 
@@ -41,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('group_descriptions');
     }
 };
