@@ -1,0 +1,27 @@
+@font-face {
+    font-family: caecilla;
+    src: url(../fonts/caecilla/CaeciliaLTStd-Heavy.otf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: caecilla;
+    src: url(../fonts/caecilla/CaeciliaLTStd-Bold.otf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: whitney;
+    src: url(../fonts/whitney/Whitney-Bold.otf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: whitney;
+    src: url(../fonts/whitney/Whitney-Book.otf);
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+:root {
+    --primary: #114d8a;
+    --primary-light: #92b7dd;
+    --primary-dark: #336699;
+
+    --secondary: #e6752b;
+    --secondary-dark: #8d481a;
+    --accent: #ec068d;
+
+    --text: #0d0d0d;
+
+    --base-padding: 20px;
+    --page-margin: 1300px;
+}
+
+h1 { font-size: clamp(24px, 3vw, 32px); }
+h2 { font-size: clamp(20px, 3vw, 28px); }
+h3 { font-size: clamp(20px, 3vw, 24px); }
+
+body {
+    color: #0d0d0d;
+    font-family: "whitney";
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    all: unset;
+    cursor: pointer;
+}
+
+.container {
+    padding: var(--base-padding);
+}
+
+.container:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.page-margin {
+    max-width: var(--page-margin);
+    margin: 0 auto;
+}
+
+.base-padding {
+    padding: 10px var(--base-padding);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--primary);
+    color: white;
+}
+
+header .logo {
+    font-family: 'Courgette', cursive;
+    margin: 0;
+    padding: 5px var(--base-padding);
+    max-width: clamp(140px, 35vw, 200px);
+}
+
+header nav {
+    display: flex;
+    font-size: 20px;
+}
+
+header nav a {
+    display: block;
+    background-color: rgba(0,0,0,0.1);
+    padding: clamp(15px, 2.8vw, 28px);
+    position: relative;
+}
+
+header nav a.active {
+    background-color: rgba(0,0,0,0.4);
+}
+
+header nav a.active:hover {
+    background-color: rgba(0,0,0,0.4);
+}
+
+header nav a:hover {
+    background-color: rgba(0,0,0,0.250);
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip:hover .tooltip-content {
+    opacity: 1;
+    color: white;
+}
+
+.tooltip .tooltip-content {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    background: var(--primary);
+    color: var(--text);
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
+    bottom: 0;
+    right: 20px;
+    text-align: center;
+    transform: translateY(calc(100% + 10px));
+    min-width: 170px;
+    transition: opacity 0.3s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.tooltip .tooltip-content-inner {
+    position: relative;
+}
+
+.tooltip span {
+    display: block;
+}
+
+.arrow-up {
+    position: absolute;
+    top: calc(-100% + 3px);
+    right: 0;
+    width: 0; 
+    height: 0; 
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    
+    border-bottom: 10px solid var(--primary-light);
+}
+
+/* Sections */
+#intro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: clamp(200px, 100vw, 600px);
+    background-image: url('../images/hero-bg.png');
+    background-size: cover;
+}
+
+#intro .inner {
+    max-width: 600px;
+    height: 100%;
+}
+
+#intro .title {
+    font-size: 32px;
+    margin: 0 0 -10px 0;
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: var(--secondary);
+}
+
+footer .logo {
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+footer .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: var(--page-margin);
+    margin: 0 auto;
+    padding: 40px var(--base-padding);
+}
+
+footer .column:first-of-type {
+    width: 100%;
+    max-width: 600px;
+}
+
+footer .column {
+    max-width: 360px;
+    min-width: 270px;
+}
+
+footer .column > .title {
+    color: var(--primary);
+    margin-top: 0;
+    color: white;
+}
+
+footer .column nav {
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer .column .social-tray {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 24px;
+}
+
+footer .column .social-tray a {
+    transition: transform 0.2s;
+}
+
+footer .column .social-tray a:hover {
+    transform: scale(1.2);
+}
+
+footer .column nav:not(.social-tray) a {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: white;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--text);
+    transition: background-color 0.3s;
+    box-shadow: 0 0 10px -5px rgba(0,0,0,0.5);
+}
+
+footer .column nav:not(.social-tray) a:hover {
+    background-color: #eee;
+}
+
+.footer-copyright {
+    background: var(--primary);
+    color: white;
+}
