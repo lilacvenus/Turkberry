@@ -10,6 +10,7 @@ use App\Models\Product;
 use App\Models\Variety;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -74,7 +75,31 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // TODO: Add data validation (and make sure user is logged in)
+        $headerID = DB::table('headers')->where('name', '=', $request->product_type)->first()->id;
+        if ($request->product_available === '1') {
+            $availability = true;
+        } else {
+            $availability = false;
+        }
+        if ($request->product_stock === '1') {
+            $stock = true;
+        } else {
+            $stock = false;
+        }
+
+        Product::create([
+            'name' => $request->product_name,
+            'description' => $request->product_description,
+            'price' => $request->product_price,
+            'image' => $request->image_url,
+            'availability' => $availability,
+            'stock' => $stock,
+            'header' => $headerID,
+            'created_by' => Auth::id()
+        ]);
+
+        return redirect(route('products.index'))->with('status', 'Product Added');
     }
 
     /**
