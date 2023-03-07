@@ -75,31 +75,42 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        // TODO: Add data validation (and make sure user is logged in)
-        $headerID = DB::table('headers')->where('name', '=', $request->product_type)->first()->id;
-        if ($request->product_available === '1') {
-            $availability = true;
-        } else {
-            $availability = false;
-        }
-        if ($request->product_stock === '1') {
-            $stock = true;
-        } else {
-            $stock = false;
-        }
+        if (!Auth::check()) {
+            return redirect(route('products.index'))->with('status', 'Access Denied');
 
-        Product::create([
-            'name' => $request->product_name,
-            'description' => $request->product_description,
-            'price' => $request->product_price,
-            'image' => $request->image_url,
-            'availability' => $availability,
-            'stock' => $stock,
-            'header' => $headerID,
-            'created_by' => Auth::id()
-        ]);
+        } else {
+            $request->validate([
+                'product_name' => ['required', 'unique:products,name', 'max:100'],
+                'product_description' => ['required', 'unique:products,description', 'max:255'],
+                'product_type' => ['required', 'exists:headers,name', 'max:100'],
+                'image_url' => ['required', 'max:255', 'unique:products,image', 'url', 'ends_with:.jpg,.png,.webp,.avif,.gif,.tiff,.jpeg'],
+                'product_price' => ['required', 'max:50', 'numeric']
+            ]);
+            $headerID = DB::table('headers')->where('name', '=', $request->product_type)->first()->id;
+            //if ($request->product_available === '1') {
+            //    $availability = true;
+            //} else {
+            //    $availability = false;
+            //}
+            //if ($request->product_stock === '1') {
+            //    $stock = true;
+            //} else {
+            //    $stock = false;
+            //}
 
-        return redirect(route('products.index'))->with('status', 'Product Added');
+            Product::create([
+                'name' => $request->product_name,
+                'description' => $request->product_description,
+                'price' => $request->product_price,
+                'image' => $request->image_url,
+                'availability' => $request->product_available,
+                'stock' => $request->product_stock,
+                'header' => $headerID,
+                'created_by' => Auth::id()
+            ]);
+
+            return redirect(route('products.index'))->with('status', 'Product Added');
+        }
     }
 
     /**
