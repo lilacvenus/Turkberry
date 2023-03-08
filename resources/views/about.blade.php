@@ -19,5 +19,5 @@
 
 
 
-ABOUT US
+ABOUT US!
 @endsection
