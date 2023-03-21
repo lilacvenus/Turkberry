@@ -48,10 +48,10 @@ class ProductController extends Controller
         $headerdescriptions = HeaderDescription::orderBy('header')->get();
         $groupdescriptions = GroupDescription::orderBy('group')->get();
         $products = Product::orderBy('header')->get();
-            $varieties = Variety::orderBy('header')->get();
-            $headers = Header::orderBy('group')->get();
-            $groups = Group::orderBy('id')->get();
-//            dd($groups,$headers,$varieties,$products,$groupdescriptions,$headerdescriptions);
+        $varieties = Variety::orderBy('header')->get();
+        $headers = Header::orderBy('group')->get();
+        $groups = Group::orderBy('id')->get();
+//      dd($groups,$headers,$varieties,$products,$groupdescriptions,$headerdescriptions);
 
         return view('products.index', compact('products', 'varieties' , 'headers', 'headerdescriptions', 'groups', 'groupdescriptions'));
     }

@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             GroupDescriptionSeeder::class,
             HeaderDescriptionSeeder::class,
             StoreSeeder::class,
+            TrackingSeeder::class,
         ]);
     }
 }
