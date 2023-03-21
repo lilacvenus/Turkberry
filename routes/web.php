@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 
@@ -33,6 +33,10 @@ Route::get('/admins/create', function () {
 
 Route::get('/admins/edit', function () {
     return view('admins.edit');
+});
+
+Route::get('/about', function () {
+    return view('about');
 });
 
 Route::resource('products',ProductController::class);
