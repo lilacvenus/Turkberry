@@ -32,7 +32,7 @@ class ProductController extends Controller
             $headers = Header::orderBy('group')->leftjoin('varieties', 'headers.id', '=', 'varieties.header')->where('varieties.availability', '=', '1')->select('headers.*')->union($productheader);
             $groups = Group::orderBy('id')->joinSub($headers, 'headers', function ($join) {
                 $join->on('groups.id', '=', 'headers.group');
-            })->select('groups.*')->get();
+            })->select('groups.*')->distinct()->get();
             $headers = $headers->get();
         }
         $headerdescriptions = HeaderDescription::orderBy('header')->get();
