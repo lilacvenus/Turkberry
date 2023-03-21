@@ -73,9 +73,18 @@
 
                                 <div class="form-group row">
                                     <label for="product_type" class="col-sm-2 col-form-label">Product Type</label>
-                                    <div class="col-sm-10">
-                                        <input name="product_type" class="form-control" id="product_type" placeholder="Product Type">
-                                    </div>
+{{--                                    <div class="col-sm-10">--}}
+{{--                                        <input name="product_type" class="form-control" id="product_type" placeholder="Product Type">--}}
+{{--                                    </div>--}}
+
+                                    <select name="product_type" id="product_type"  class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        @foreach($group as $type)
+
+                                                    <option value="{{$type->name}}">{{$type->name}}</option>
+
+                                        @endforeach
+                                    </select>
                                 </div>
                                 @error('product_type')
                                 <div class="alert alert-danger">{{ $message }}</div>

@@ -28,7 +28,7 @@
                             <div class="container px-4 " id="hanging-icons">
                                 @foreach($headers as $header )
                                     @if( $group->id == $header->group)
-                                        <h4 class="pb-2 border-bottom text-center mt-3">{{$header->name}}</h4>
+                                        <h4 class="pb-2 border-bottom text-center mt-3 font-weight-bold">{{$header->name}}</h4>
                                             @foreach($groupdescriptions as $groupdescription )
                                                 @if($groupdescription->group == $group->id)
                                                     <div class="text-center">{{$groupdescription->description}}</div>
