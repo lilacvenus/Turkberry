@@ -63,8 +63,9 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
-        return view('products.create');
+
+        $group =  Header::orderBy('group')->get();
+        return view('products.create',compact('group',));
     }
 
     /**
@@ -75,6 +76,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+
         if (!Auth::check()) {
             return redirect(route('products.index'))->with('status', 'Access Denied');
 

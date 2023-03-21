@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+{{--            <div class="card">--}}
                 @if (session('status'))
                 <div class="card-header">{{ __('Status Message') }}</div>
                 <div class="card-body">
@@ -28,7 +28,7 @@
                             <div class="container px-4 " id="hanging-icons">
                                 @foreach($headers as $header )
                                     @if( $group->id == $header->group)
-                                        <h4 class="pb-2 border-bottom text-center mt-3">{{$header->name}}</h4>
+                                        <h4 class="pb-2 border-bottom text-center mt-3 font-weight-bold">{{$header->name}}</h4>
                                             @foreach($groupdescriptions as $groupdescription )
                                                 @if($groupdescription->group == $group->id)
                                                     <div class="text-center">{{$groupdescription->description}}</div>
@@ -40,8 +40,6 @@
                                                         <div class="text-center">{{$headerdescription->details}}</div>
                                                     @endif
                                                 @endforeach
-{{--                                            </div>--}}
-
                                                 <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3 ">
                                                     @foreach($products as $product)
                                                         @if( $product->header == $header->id )
@@ -49,7 +47,6 @@
                                                         @endif
                                                     @endforeach
                                                 </div>
-{{--                                                <div class="row row-cols-1 row-cols-lg-3 w-100">--}}
                                                     @foreach($varieties as $variety)
                                                         @if( $variety->header == $header->id )
                                                             @if($variety->image ==null)
@@ -61,21 +58,21 @@
                                                         @endif
                                                     @endforeach
                                                 </div>
-
                                     @endif
-
-
                                 @endforeach
 
                             </div>
 
                         </div>
+                        </div>
 
                 @endforeach
-                        </div>
-            </div>
+
         </div>
     </div>
+
+
+
 {{--    the outer card--}}
 </div>
 @endsection
