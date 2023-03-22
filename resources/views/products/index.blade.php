@@ -1,10 +1,7 @@
 
 
 @extends('layouts.app')
-
 @section('content')
-
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -56,15 +53,8 @@
                                                             @if($variety->image ==null)
                                                             <div class="text-center">{{$variety->name}}</div>
                                                             @endif
-
-
-
-
                                                                 @if($variety->image != null)
-
-
                                                                     <img src="{{$variety->image}}" alt={{$variety->name}}>
-
                                                                 @endif
                                                         @endif
                                                     @endforeach
