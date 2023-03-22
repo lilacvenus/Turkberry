@@ -6,7 +6,7 @@
 {{--            <div class="card">--}}
                 @if (session('status'))
 
-{{--                <a class= "btn btn-primary" href="{{ route('posts.create') }}">Create New Post</a>--}}
+
 
                 <div class="card-header">{{ __('Status Message') }}</div>
                 <div class="card-body">
@@ -15,6 +15,15 @@
                     </div>
                 </div>
                 @endif
+
+            @if(Auth::check())
+                <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Product</a>
+                <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Variety</a>
+                <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Group Description</a>
+                <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Header Description</a>
+            @endif
+
+
                 @foreach($groups as $group)
                         <div class="card">
                 <div class="card-header">
@@ -27,7 +36,7 @@
                                         <h4 class="pb-2 border-bottom text-center mt-3 font-weight-bold">{{$header->name}}</h4>
                                             @foreach($groupdescriptions as $groupdescription )
                                                 @if($groupdescription->group == $group->id)
-                                                    <div class="text-center">{{$groupdescription->description}}</div>
+                                                    <div class="text-center">{!! $groupdescription->description !!}</div>
                                                 @endif
                                             @endforeach
                                             <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3">
@@ -38,14 +47,41 @@
                                                 @endforeach
                                                 <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3 ">
                                                     @foreach($products as $product)
+
                                                         @if( $product->header == $header->id )
-                                                            <div class="text-center">
-                                                                {{$product->name}}
-                                                                @if($product->price != null) - ${{$product->price}}@endif
-                                                                @if($product->image != null)
-                                                                    <img src="{{$product->image}}" alt={{$product->name}}>
-                                                                @endif
-                                                            </div>
+
+
+{{--                                                            //NOTE copy for varieties , group descriptions, and header descriptions.--}}
+
+{{--                                                        //Link pass the    priooduct / the id--}}
+
+
+
+                                                            @if(Auth::check())
+                                                                <a href="{{ route('products.edit',[ $product->id]) }}">
+                                                                    <div class="text-center">
+                                                                        {{$product->name}}
+                                                                        @if($product->price != null) - ${{$product->price}}@endif
+                                                                        @if($product->image != null)
+                                                                            <img src="{{$product->image}}" alt={{$product->name}}>
+
+
+                                                                        @endif
+                                                                    </div>
+                                                                </a>
+                                                            @else
+                                                                <div class="text-center">
+                                                                    {{$product->name}}
+                                                                    @if($product->price != null) - ${{$product->price}}@endif
+                                                                    @if($product->image != null)
+                                                                        <img src="{{$product->image}}" alt={{$product->name}}>
+
+
+                                                                    @endif
+                                                                </div>
+                                                            @endif
+
+
 
                                                         @endif
                                                     @endforeach
