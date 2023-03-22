@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,14 +14,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('varieties', function (Blueprint $table) {
+        Schema::create('trackings', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description')->nullable();
-            $table->string('image')->nullable();
-            $table->boolean('availability');
-            $table->foreignId('header')->references('id')->on('headers');
-            $table->boolean('stock');
+            $table->string('table');
+            $table->integer('table_id');
+            $table->char('action');
+            $table->dateTime('action_at')->default(Carbon::now());
+            $table->foreignId('action_by');
+
+            $table->foreign('action_by')->references('id')->on('users');
         });
     }
 
@@ -31,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('varieties');
+        Schema::dropIfExists('trackings');
     }
 };
