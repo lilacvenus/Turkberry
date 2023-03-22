@@ -36,6 +36,7 @@ class Product extends Model
                 'action' => 'u',
                 'table_id' => $model->id,
                 'action_by' => Auth::id(),
+                'action_at' => Carbon::now(),
             ]);
         });
 
@@ -46,6 +47,7 @@ class Product extends Model
                 'action' => 'd',
                 'table_id' => $model->id,
                 'action_by' => Auth::id(),
+                'action_at' => Carbon::now(),
             ]);
         });
     }
