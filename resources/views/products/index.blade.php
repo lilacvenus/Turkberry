@@ -37,7 +37,7 @@
                                             <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3">
                                                 @foreach($headerdescriptions as $headerdescription)
                                                     @if( $headerdescription->header == $header->id )
-                                                        <div class="text-center">{{$headerdescription->details}}</div>
+                                                        <div class="text-center">{!! $headerdescription->details !!}</div>
                                                     @endif
                                                 @endforeach
                                                 <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3 ">
