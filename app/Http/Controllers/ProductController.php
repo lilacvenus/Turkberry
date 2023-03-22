@@ -137,7 +137,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        $group = Header::orderBy('group')->get();
+        return view('products.edit',compact(['product']),compact('group'));
     }
 
     /**
@@ -149,9 +150,44 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
-        return view('products.edit');
-    }
+            //
+//
+
+
+        $request->validate([
+            'name' => ['required', 'unique:products,name,'.$product->id,'max:100'],
+            'description' => ['required', 'unique:products,description,'.$product->id, 'max:255'],
+            'header' => ['required', 'max:100'],
+            'image' => ['required', 'max:255', 'unique:products,image,'.$product->id, 'url', 'ends_with:.jpg,.png,.webp,.avif,.gif,.tiff,.jpeg'],
+            'price' => ['required', 'max:50', 'numeric'],
+        ]);
+
+
+        if($request->get('stock') == null){
+            $isStock = 0;
+        }
+        else{
+            $isStock = request('stock');
+        }
+
+        if($request->get('availability') == null){
+            $isAvailability = 0;
+        }
+        else{
+            $isAvailability = request('availability');
+        }
+
+            $product->name= $request->name;
+            $product->description = $request->description;
+             $product->header = $request->header;
+            $product->image= $request->image;
+            $product->price= $request->price;
+            $product->stock = $isStock;
+        $product->availability = $isAvailability;
+            $product->save();
+
+        return redirect(route('products.index'));
+        }
 
     /**
      * Remove the specified resource from storage.
@@ -162,5 +198,8 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+       $deleted = $product->name." has been deleted!";
+        $product->delete();
+        return redirect(route('products.index'))->with('status', $deleted );
     }
 }

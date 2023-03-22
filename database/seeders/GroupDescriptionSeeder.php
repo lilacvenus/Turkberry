@@ -32,7 +32,7 @@ class GroupDescriptionSeeder extends Seeder
 
         DB::table('group_descriptions')->insert([
             'group' => 3,
-            'details' => 'Office Hero - $36.00 \n(12 personalized donuts with a carafe of coffee)',
+            'details' => 'Office Hero - $36.00 </br>(12 personalized donuts with a carafe of coffee)',
         ]);
     }
 }

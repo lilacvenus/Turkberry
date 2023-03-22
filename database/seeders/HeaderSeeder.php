@@ -77,7 +77,7 @@ class HeaderSeeder extends Seeder
         ]);
         //13
         DB::table('headers')->insert([
-            'name' => 'Other',
+            'name' => ' Drink Additives',
             'group' => 4,
         ]);
     }
