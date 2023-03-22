@@ -24,6 +24,14 @@ class VarietySeeder extends Seeder
         ]);
 
         DB::table('varieties')->insert([
+            'name' => 'Almond',
+            'image' => 'turkberry-assets/flavors/Almond.png',
+            'availability' => true,
+            'header' => 4,
+            'stock' => true,
+        ]);
+
+        DB::table('varieties')->insert([
             'name' => 'Amaretto',
             'image' => 'turkberry-assets/flavors/Amaretto.png',
             'availability' => true,

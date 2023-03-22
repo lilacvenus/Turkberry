@@ -1,15 +1,13 @@
-
-
 @extends('layouts.app')
-
 @section('content')
-
-
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
 {{--            <div class="card">--}}
                 @if (session('status'))
+
+{{--                <a class= "btn btn-primary" href="{{ route('posts.create') }}">Create New Post</a>--}}
+
                 <div class="card-header">{{ __('Status Message') }}</div>
                 <div class="card-body">
                     <div class="alert alert-success" role="alert">
@@ -17,10 +15,8 @@
                     </div>
                 </div>
                 @endif
-
                 @foreach($groups as $group)
                         <div class="card">
-
                 <div class="card-header">
                     <h3>{{$group->name}}</h3>
                 </div>
@@ -43,7 +39,14 @@
                                                 <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3 ">
                                                     @foreach($products as $product)
                                                         @if( $product->header == $header->id )
-                                                            <div class="text-center">{{$product->name}}</div>
+                                                            <div class="text-center">
+                                                                {{$product->name}}
+                                                                @if($product->price != null) - ${{$product->price}}@endif
+                                                                @if($product->image != null)
+                                                                    <img src="{{$product->image}}" alt={{$product->name}}>
+                                                                @endif
+                                                            </div>
+
                                                         @endif
                                                     @endforeach
                                                 </div>
@@ -52,9 +55,9 @@
                                                             @if($variety->image ==null)
                                                             <div class="text-center">{{$variety->name}}</div>
                                                             @endif
-                                                            @if($variety->image !=null)
-                                                                <img src="{{ URL::asset($variety->image) }}" alt={{$variety->name}}>
-                                                            @endif
+                                                                @if($variety->image != null)
+                                                                    <img  src="{{$variety->image}}" alt={{$variety->name}}>
+                                                                @endif
                                                         @endif
                                                     @endforeach
                                                 </div>
@@ -70,9 +73,6 @@
 
         </div>
     </div>
-
-
-
 {{--    the outer card--}}
 </div>
 @endsection

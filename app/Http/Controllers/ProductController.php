@@ -8,6 +8,7 @@ use App\Models\Header;
 use App\Models\HeaderDescription;
 use App\Models\Product;
 use App\Models\Variety;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -108,7 +109,7 @@ class ProductController extends Controller
                 'availability' => $request->product_available,
                 'stock' => $request->product_stock,
                 'header' => $headerID,
-                'created_by' => Auth::id()
+
             ]);
 
             return redirect(route('products.index'))->with('status', 'Product Added');
@@ -124,6 +125,8 @@ class ProductController extends Controller
     public function show(Product $product)
     {
         //
+
+
     }
 
     /**
