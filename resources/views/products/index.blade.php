@@ -43,7 +43,11 @@
                                                 <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3 ">
                                                     @foreach($products as $product)
                                                         @if( $product->header == $header->id )
-                                                            <div class="text-center">{{$product->name}}</div>
+                                                            <div class="text-center">
+                                                                {{$product->name}}
+                                                                @if($product->price != null) - ${{$product->price}}@endif
+                                                            </div>
+
                                                         @endif
                                                     @endforeach
                                                 </div>
@@ -52,9 +56,16 @@
                                                             @if($variety->image ==null)
                                                             <div class="text-center">{{$variety->name}}</div>
                                                             @endif
-                                                            @if($variety->image !=null)
-                                                                <img src="{{ URL::asset($variety->image) }}" alt={{$variety->name}}>
-                                                            @endif
+
+
+
+
+                                                                @if($variety->image != null)
+
+
+                                                                    <img src="{{$variety->image}}" alt={{$variety->name}}>
+
+                                                                @endif
                                                         @endif
                                                     @endforeach
                                                 </div>

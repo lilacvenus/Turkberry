@@ -96,7 +96,7 @@ class HeaderDescriptionSeeder extends Seeder
 
         DB::table('header_descriptions')->insert([
             'header' => 10,
-            'details' => 'Morning Miracle - $4.00 \n(Medium coffee + personalized donut)',
+            'details' => 'Morning Miracle - $4.00 (Medium coffee + personalized donut)',
             'created_by' => 6,
         ]);
 
