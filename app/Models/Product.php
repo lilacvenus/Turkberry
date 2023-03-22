@@ -14,9 +14,9 @@ class Product extends Model
 
     protected $fillable = ['name', 'description', 'price', 'image', 'header', 'availability', 'stock'];
     public $timestamps = false;
-
     public static function boot()
     {
+
         parent::boot();
         static::created(function($model)
         {
@@ -25,7 +25,7 @@ class Product extends Model
                 'action' => 'c',
                 'table_id' => $model->id,
                 'action_by' => Auth::id(),
-                'action_at' => Carbon::now(),
+                'action_at' => Carbon::now()
             ]);
         });
 
