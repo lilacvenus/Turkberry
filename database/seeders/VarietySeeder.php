@@ -41,7 +41,7 @@ class VarietySeeder extends Seeder
 
         DB::table('varieties')->insert([
             'name' => 'Birthday Cake',
-            'image' => 'resources/turkberry-assets/flavors/Birthday-Cake.png',
+            'image' => 'turkberry-assets/flavors/Birthday-Cupcake.png',
             'availability' => true,
             'header' => 4,
             'stock' => true,
