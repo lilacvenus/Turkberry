@@ -1,5 +1,3 @@
-
-
 @extends('layouts.app')
 @section('content')
 <div class="container">
@@ -14,10 +12,8 @@
                     </div>
                 </div>
                 @endif
-
                 @foreach($groups as $group)
                         <div class="card">
-
                 <div class="card-header">
                     <h3>{{$group->name}}</h3>
                 </div>
@@ -71,9 +67,6 @@
 
         </div>
     </div>
-
-
-
 {{--    the outer card--}}
 </div>
 @endsection
