@@ -5,6 +5,9 @@
         <div class="col-md-8">
 {{--            <div class="card">--}}
                 @if (session('status'))
+
+{{--                <a class= "btn btn-primary" href="{{ route('posts.create') }}">Create New Post</a>--}}
+
                 <div class="card-header">{{ __('Status Message') }}</div>
                 <div class="card-body">
                     <div class="alert alert-success" role="alert">
@@ -39,6 +42,9 @@
                                                             <div class="text-center">
                                                                 {{$product->name}}
                                                                 @if($product->price != null) - ${{$product->price}}@endif
+                                                                @if($product->image != null)
+                                                                    <img src="{{$product->image}}" alt={{$product->name}}>
+                                                                @endif
                                                             </div>
 
                                                         @endif
@@ -50,7 +56,7 @@
                                                             <div class="text-center">{{$variety->name}}</div>
                                                             @endif
                                                                 @if($variety->image != null)
-                                                                    <img src="{{$variety->image}}" alt={{$variety->name}}>
+                                                                    <img  src="{{$variety->image}}" alt={{$variety->name}}>
                                                                 @endif
                                                         @endif
                                                     @endforeach
