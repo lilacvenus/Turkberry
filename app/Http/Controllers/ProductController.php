@@ -84,9 +84,11 @@ class ProductController extends Controller
         } else {
             $request->validate([
                 'product_name' => ['required', 'unique:products,name', 'max:100'],
-                'product_description' => ['required', 'unique:products,description', 'max:255'],
+//                'product_description' => ['required', 'unique:products,description', 'max:255'],
+                'product_description' => ['max:255'],
                 'product_type' => ['required', 'exists:headers,name', 'max:100'],
-                'image_url' => ['required', 'max:255', 'unique:products,image', 'url', 'ends_with:.jpg,.png,.webp,.avif,.gif,.tiff,.jpeg'],
+//                'image_url' => ['required', 'max:255', 'unique:products,image', 'url', 'ends_with:.jpg,.png,.webp,.avif,.gif,.tiff,.jpeg'],
+                'image_url' => ['max:255'],
                 'product_price' => ['required', 'max:50', 'numeric']
             ]);
             $headerID = DB::table('headers')->where('name', '=', $request->product_type)->first()->id;

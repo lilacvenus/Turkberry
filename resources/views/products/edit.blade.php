@@ -51,7 +51,7 @@
 
                             <div class="form-group">
                                 <label for="image">Image Url</label>
-                                <input name='image' type="text" class="form-control" id="image_url" value="{{old('image')??$product->image}}" placeholder="Enter Image Url" >
+                                <input name='image' type="text" class="form-control" id="image" value="{{old('image')??$product->image}}" placeholder="Enter Image Url" >
                                 @error('image')
                                 <div class="alert alert-danger">{{$message }}</div>
                                 @enderror
