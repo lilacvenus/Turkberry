@@ -33,18 +33,21 @@
                         <li class="nav-item">
                             <a class="btn btn-primary" href="{{ route('products.index') }}">{{ __('Products') }}</a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"  href="{{ url('/about') }}">About Us</a>
+                        </li>
+
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link"  href="{{ redirect('admins.index') }}">{{ __('Admins') }}</a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link"  href="{{ redirect('admins.index') }}">{{ __('Admins') }}</a>--}}
+{{--                        </li>--}}
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link"  href="{{ url('/about') }}">About Us</a>
-{{--                                <a class="nav-link" href="{{ redirect('about') }}">{{ __('About Us') }}</a>--}}
-                            </li>
+
 
                         <!-- Authentication Links -->
                         @guest
@@ -54,12 +57,14 @@
                                 </li>
                             @endif
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
+{{--                            @if (Route::has('register'))--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
+{{--                                </li>--}}
+{{--                            @endif--}}
                         @else
+                                <li> <img src="{{ Auth::user()->profile_picture }}"></li>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -69,7 +74,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                        {{ __( 'Logout '.Auth::user()->first_name) }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -91,10 +96,10 @@
 
 <section class="">
     <!-- Footer -->
-    <footer class="bg-secondary text-white text-center" >
+    <footer class="bg-secondary text-white text-center fixed-bottom"  >
 
         <div class="text-center p-3" style="background-color: rgba(0, 217, 213);">
-            © 2020 Copyright:
+            Catch you soon at
             <a class="text-white" href="{{ url('/') }}">TurkBerry</a>
         </div>
         <!-- Copyright -->
