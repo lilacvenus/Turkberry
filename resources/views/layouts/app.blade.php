@@ -96,10 +96,10 @@
 
 <section class="">
     <!-- Footer -->
-    <footer class="bg-secondary text-white text-center" >
+    <footer class="bg-secondary text-white text-center fixed-bottom"  >
 
         <div class="text-center p-3" style="background-color: rgba(0, 217, 213);">
-            © 2020 Copyright:
+            Catch you soon at
             <a class="text-white" href="{{ url('/') }}">TurkBerry</a>
         </div>
         <!-- Copyright -->
