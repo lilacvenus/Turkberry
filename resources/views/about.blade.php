@@ -17,7 +17,7 @@
 {{--                    @endif--}}
 {{--                        <div class="table-responsive-sm">--}}
     <div class="card" style="width: 75rem;">
-        <img class="card-img-top"  src="{{asset('/public/turkberry-assets/pictures/23.png')}}" alt="Card Image">
+        <img class="card-img-top"  src="{{asset('/public/turkberry-assets/pictures/23.png')}}" alt="">
         <div class="card-body">
             <h5 class="card-title">ABOUT US!</h5>
             <p class="card-text">
