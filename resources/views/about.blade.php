@@ -21,7 +21,7 @@
         <div class="card-body">
             <h5 class="card-title">ABOUT US!</h5>
             <p class="card-text">
-            <p>Turk Berry is a company that offers a wide range of delicious treats to satisfy your sweet tooth located in Canada.</p>
+            <p>Turk Berry is a company that offers a wide range of delicious treats to satisfy your sweet tooth located in Turks and Caicos.</p>
             <p>From delectable donuts to creamy ice-cream, Turk Berry has something for everyone.</p>
             <p>Our donuts are baked fresh every day, with a variety of flavors and toppings to choose from.</p>
             <p>Whether you're in the mood for classic glazed donuts or something more unique like blueberry,
