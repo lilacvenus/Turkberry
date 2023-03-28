@@ -21,7 +21,14 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
+        ]);
+
+        DB::table('varieties')->insert([
+            'name' => 'Almond',
+            'image' => 'turkberry-assets/flavors/Almond.png',
+            'availability' => true,
+            'header' => 4,
+            'stock' => true,
         ]);
 
         DB::table('varieties')->insert([
@@ -30,7 +37,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -39,18 +45,15 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
-        //REMOVED CAUSE IMAGE IS DIFFERENT SIZE
-//        DB::table('varieties')->insert([
-//            'name' => 'Birthday Cake',
-//            'image' => 'turkberry-assets/flavors-page/Birthday-Cupcake.png',
-//            'availability' => true,
-//            'header' => 4,
-//            'stock' => true,
-//            'created_by' => 6,
-//        ]);
+        DB::table('varieties')->insert([
+            'name' => 'Birthday Cake',
+            'image' => 'turkberry-assets/flavors/Birthday-Cupcake.png',
+            'availability' => true,
+            'header' => 4,
+            'stock' => true,
+        ]);
 
         DB::table('varieties')->insert([
             'name' => 'Bubble Gum',
@@ -58,7 +61,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -67,7 +69,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -76,7 +77,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -85,7 +85,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -94,7 +93,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -103,7 +101,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -112,7 +109,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -121,7 +117,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -130,7 +125,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -139,7 +133,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -148,7 +141,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -157,7 +149,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -166,7 +157,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -175,7 +165,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -184,7 +173,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -193,7 +181,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -202,7 +189,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -211,7 +197,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -220,7 +205,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -229,7 +213,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -238,7 +221,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -247,7 +229,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -256,7 +237,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -265,7 +245,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -274,7 +253,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 4,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -284,7 +262,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 5,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -292,7 +269,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 5,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -300,7 +276,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 5,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -308,7 +283,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 5,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -318,7 +292,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 5,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -328,7 +301,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 6,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -338,7 +310,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 6,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -348,7 +319,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 6,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -358,7 +328,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 6,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -368,7 +337,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 6,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -378,7 +346,6 @@ class VarietySeeder extends Seeder
             'availability' => false,
             'header' => 6,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -386,7 +353,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -394,7 +360,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' =>9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -402,7 +367,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' =>9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -410,7 +374,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' =>9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -418,7 +381,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' =>9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -426,7 +388,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -434,7 +395,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -442,7 +402,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -450,7 +409,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -458,7 +416,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -466,7 +423,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -474,7 +430,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -482,7 +437,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 9,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -490,7 +444,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -498,7 +451,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -506,7 +458,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -514,7 +465,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -522,7 +472,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -530,7 +479,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -538,7 +486,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -546,7 +493,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -554,7 +500,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -562,7 +507,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -570,7 +514,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -578,7 +521,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -586,7 +528,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -594,7 +535,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 8,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -602,7 +542,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -610,7 +549,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -618,7 +556,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -626,7 +563,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -634,7 +570,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -642,7 +577,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -650,7 +584,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -658,7 +591,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -666,7 +598,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -674,7 +605,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -682,7 +612,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -690,7 +619,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -698,7 +626,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
 
         DB::table('varieties')->insert([
@@ -706,7 +633,6 @@ class VarietySeeder extends Seeder
             'availability' => true,
             'header' => 7,
             'stock' => true,
-            'created_by' => 6,
         ]);
     }
 }

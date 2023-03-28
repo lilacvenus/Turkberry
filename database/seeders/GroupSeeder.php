@@ -17,22 +17,18 @@ class GroupSeeder extends Seeder
     {
         DB::table('groups')->insert([
             'name' => 'Beverages',
-            'created_by' => 6,
         ]);
 
         DB::table('groups')->insert([
             'name' => 'Frozen Treats',
-            'created_by' => 6,
         ]);
 
         DB::table('groups')->insert([
             'name' => 'Donuts',
-            'created_by' => 6,
         ]);
 
         DB::table('groups')->insert([
             'name' => 'Hot Drinks',
-            'created_by' => 6,
         ]);
     }
 }

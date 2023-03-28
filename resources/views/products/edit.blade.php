@@ -19,57 +19,76 @@
                                 {{ session('status') }}
                             </div>
                         @endif
+                            <form action="{{  route('products.update', $product->id) }}" method="POST">
+                                @csrf
+                                @method('PUT')
 
-
-                        <form>
-                            <div class="form-group row">
-                                <label for="product_name" class="col-sm-2 col-form-label">Product Name</label>
-                                <div class="col-sm-10">
-                                    <input type="product_name" class="form-control" id="product_name" placeholder="Product Name">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input name='name' type="text" class="form-control" id="name" value="{{old('name')??$product->name}}" placeholder="Enter Name" >
+                                    @error('name')
+                                    <div class="alert alert-danger">{{$message }}</div>
+                                    @enderror
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="product_description" class="col-sm-2 col-form-label">Product Description</label>
-                                <div class="col-sm-10">
-                                    <input type="product_description" class="form-control" id="product_description" placeholder="Product Description">
+
+                                <div class="form-group">
+                                    <label for="description">Description</label>
+                                    <input name='description' type="text" class="form-control" id="description" value="{{old('description')??$product->description}}" placeholder="Enter Description" >
+                                    @error('description')
+                                    <div class="alert alert-danger">{{$message }}</div>
+                                    @enderror
                                 </div>
-                            </div>
 
-                            <div class="form-group row">
-                                <label for="product_price" class="col-sm-2 col-form-label">Price</label>
-                                <div class="col-sm-10">
-                                    <input type="product_price" class="form-control" id="product_price" placeholder="Price">
+
+                                <div class="form-group">
+                                    <label for="price">Price</label>
+                                    <input name='price' type="text" class="form-control" id="price" value="{{old('price')??$product->price}}" placeholder="Enter Price" >
+                                    @error('price')
+                                    <div class="alert alert-danger">{{$message }}</div>
+                                    @enderror
                                 </div>
+
+
+                            <div class="form-group">
+                                <label for="image">Image Url</label>
+                                <input name='image' type="text" class="form-control" id="image" value="{{old('image')??$product->image}}" placeholder="Enter Image Url" >
+                                @error('image')
+                                <div class="alert alert-danger">{{$message }}</div>
+                                @enderror
                             </div>
 
 
-                            <div class="form-group row">
-                                <label for="image_url" class="col-sm-2 col-form-label">Image Url</label>
-                                <div class="col-sm-10">
-                                    <input type="image_url" class="form-control" id="image_url" placeholder="Image Url">
+
+
+                            {{--NOTE MAKE CHECKBOXS STICKY--}}
+                                <div class="form-check">
+
+                                    <input  class="form-check-input" type="checkbox" value="1" id="stock" name="stock">
+                                    <label class="form-check-label" for="stock">
+                                       Availability
+                                    </label>
                                 </div>
-                            </div>
-
-
-
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    Product Available:
-                                </label>
 
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Product In Stock:
+
+                                    <input  class="form-check-input" type="checkbox" value="1" id="stock" name="availability">
+                                    <label class="form-check-label" for="availability">
+                                        Stock
                                     </label>
+                                </div>
 
                                     <div class="form-group row">
-                                        <label for="product_type" class="col-sm-2 col-form-label">Product Type</label>
-                                        <div class="col-sm-10">
-                                            <input type="product_type" class="form-control" id="product_type" placeholder="Product Type">
-                                        </div>
+                                        <label for="header" class="col-sm-2 col-form-label">Product Type</label>
+                                        <select name="header" id="header"  class="form-select" aria-label="Default select example">
+                                            <option>Open this select menu</option>
+                                            @foreach($group as $type)
+                                                <option @if(old('header')??$product->header == $type->id) selected @endif value="{{$type->id}}">{{$type->name}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
+                                    @error('header')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                                    @enderror
 
                                     <div class="form-group row">
                                         <div class="col-sm-10">
@@ -78,6 +97,13 @@
                                     </div>
                         </form>
 
+
+
+                            <form method="POST" action="{{ route('products.destroy',$product->id)}}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class=" btn btn-danger">Delete</button>
+                            </form>
 
 
                     </div>
