@@ -18,33 +18,35 @@
                 <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Group Description</a>
                 <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Header Description</a>
             @endif
-            @foreach($groups as $group)
-                    <div class="card">
-            <div class="card-header">
-                <h3>{{$group->name}}</h3>
-            </div>
-                    <div class="card-body">
-                        <div class="container px-4 " id="hanging-icons">
-                            @foreach($headers as $header )
-                                @if( $group->id == $header->group)
-                                    <h4 class="pb-2 border-bottom text-center mt-3 font-weight-bold">{{$header->name}}</h4>
-                                    <div class="row row-cols-2 row-cols-lg-3 w-100 mt-3">
-                                    @foreach($groupdescriptions as $groupdescription )
-                                        @if($groupdescription->group == $group->id)
-                                            <div class="text-center">{!! $groupdescription->description !!}</div>
-                                        @endif
-                                    @endforeach
-                                    </div>
-                                    <div class="row row-cols-2 row-cols-lg-3 w-100 mt-3">
-                                        @foreach($headerdescriptions as $headerdescription)
-                                            @if( $headerdescription->header == $header->id )
-                                                <div class="text-center">{!! $headerdescription->details !!}</div>
-                                            @endif
-                                        @endforeach
-                                    </div>
-                                    <div class="row row-cols-2 row-cols-lg-3 w-100 m-sm-0 m-md-3 ">
-                                        @foreach($products as $product)
-                                            @if( $product->header == $header->id )
+
+
+                @foreach($groups as $group)
+                        <div class="card m-3">
+                <div class="card-header">
+                    <h3>{{$group->name}}</h3>
+                </div>
+                        <div class="card-body">
+                            <div class="container px-4 " id="hanging-icons">
+                                @foreach($headers as $header )
+                                    @if( $group->id == $header->group)
+                                        <h4 class="pb-2 border-bottom text-center mt-3 font-weight-bold">{{$header->name}}</h4>
+                                            @foreach($groupdescriptions as $groupdescription )
+                                                @if($groupdescription->group == $group->id)
+                                                    <div class="text-center">{!! $groupdescription->description !!}</div>
+                                                @endif
+                                            @endforeach
+                                            <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3">
+                                                @foreach($headerdescriptions as $headerdescription)
+                                                    @if( $headerdescription->header == $header->id )
+                                                        <div class="text-center">{!! $headerdescription->details !!}</div>
+                                                    @endif
+                                                @endforeach
+                                                <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3 ">
+                                                    @foreach($products as $product)
+
+                                                        @if( $product->header == $header->id )
+
+
 {{--                                                            //NOTE copy for varieties , group descriptions, and header descriptions.--}}
 
 {{--                                                        //Link pass the    priooduct / the id--}}
