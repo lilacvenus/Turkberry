@@ -12,6 +12,8 @@ class Variety extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'description', 'image', 'header', 'availability', 'stock'];
+
     public $timestamps = false;
 
     public static function boot()

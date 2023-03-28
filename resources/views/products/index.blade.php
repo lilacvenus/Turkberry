@@ -15,8 +15,8 @@
             @if(Auth::check())
                 <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Product</a>
                 <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Variety</a>
-                <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Group Description</a>
-                <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Header Description</a>
+                <!--<a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Group Description</a>
+                <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Header Description</a>-->
             @endif
 
 
