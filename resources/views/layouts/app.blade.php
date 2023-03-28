@@ -96,7 +96,7 @@
 
 <section class="">
     <!-- Footer -->
-    <footer class="bg-secondary text-white text-center rounded-top">
+    <footer class="bg-secondary text-white text-center">
         <div class="d-flex justify-content-between align-items-center p-3" style="background-color: rgba(197, 52, 123);">
             <div>
                 Open 7am - 11pm daily
@@ -110,15 +110,15 @@
 
             <div class="d-flex">
                 <a href="https://www.google.com/maps/dir//21.7949213,-72.1816343/@21.7945962,-72.1785947,17z/data=!4m2!4m1!3e0">
-                    <img src="/turkberry-assets/Footer/map.png" alt="Map">
+                    <img src="/turkberry-assets/Footer/map.png" alt="Map" style="width: 52px; height: 52px;">
                 </a>
 
                 <a href="mailto:yum@turkberry.com">
-                    <img src="/turkberry-assets/Footer/mail.png" alt="Mail">
+                    <img src="/turkberry-assets/Footer/mail.png" alt="Mail" style="width: 52px; height: 52px;">
                 </a>
 
                 <a href="https://www.facebook.com/turkberry">
-                    <img src="/turkberry-assets/Footer/facebook.png" alt="Facebook">
+                    <img src="/turkberry-assets/Footer/facebook.png" alt="Facebook" style="width: 52px; height: 52px;">
                 </a>
             </div>
         </div>
