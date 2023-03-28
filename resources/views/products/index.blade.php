@@ -19,8 +19,8 @@
             @if(Auth::check())
                 <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Product</a>
                 <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Variety</a>
-                <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Group Description</a>
-                <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Header Description</a>
+                <!--<a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Group Description</a>
+                <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Header Description</a>-->
             @endif
 
 
@@ -87,6 +87,8 @@
                                                     @endforeach
                                                 </div>
                                                     @foreach($varieties as $variety)
+                                                        @if(Auth::check())
+                                                            <a href="{{ route('varieties.edit',[ $variety->id]) }}">
                                                         @if( $variety->header == $header->id )
                                                             @if($variety->image ==null)
                                                             <div class="text-center">{{$variety->name}}</div>
@@ -94,6 +96,8 @@
                                                                 @if($variety->image != null)
                                                                     <img  src="{{$variety->image}}" alt={{$variety->name}}>
                                                                 @endif
+                                                        @endif
+                                                            </a>
                                                         @endif
                                                     @endforeach
                                                 </div>
