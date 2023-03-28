@@ -25,7 +25,7 @@
 
 
                 @foreach($groups as $group)
-                        <div class="card">
+                        <div class="card m-3">
                 <div class="card-header">
                     <h3>{{$group->name}}</h3>
                 </div>
