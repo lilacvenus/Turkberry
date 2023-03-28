@@ -98,7 +98,7 @@
     <!-- Footer -->
     <footer class="bg-secondary text-white text-center">
         <div class="d-flex justify-content-between align-items-center p-3" style="background-color: rgba(197, 52, 123);">
-            <div class="ml-3">
+            <div>
                 Open 7am - 11pm daily
                 <br>
                 <small>Salt Mills Plaza Grace Bay Rd, Grace Bay, TKCA 1ZZ Turks and Caicos Islands</small>
@@ -109,16 +109,16 @@
             </div>
 
             <div class="d-flex mr-3">
-                <a href="https://www.google.com/maps/dir//21.7949213,-72.1816343/@21.7945962,-72.1785947,17z/data=!4m2!4m1!3e0">
-                    <img src="/turkberry-assets/Footer/map.png" alt="Map" style="width: 40px; height: 40px;" class="mr-1">
+                <a href="https://www.google.com/maps/dir//21.7949213,-72.1816343/@21.7945962,-72.1785947,17z/data=!4m2!4m1!3e0" class="px-2">
+                    <img src="/turkberry-assets/Footer/map.png" alt="Map" style="width: 40px; height: 40px;">
                 </a>
 
-                <a href="mailto:yum@turkberry.com">
+                <a href="mailto:yum@turkberry.com" class="px-2">
                     <img src="/turkberry-assets/Footer/mail.png" alt="Mail" style="width: 40px; height: 40px;">
                 </a>
 
-                <a href="https://www.facebook.com/turkberry">
-                    <img src="/turkberry-assets/Footer/facebook.png" alt="Facebook" style="width: 40px; height: 40px;" class="ml-1">
+                <a href="https://www.facebook.com/turkberry" class="px-2">
+                    <img src="/turkberry-assets/Footer/facebook.png" alt="Facebook" style="width: 40px; height: 40px;">
                 </a>
             </div>
         </div>
