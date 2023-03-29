@@ -1,5 +1,3 @@
-
-
 @extends('layouts.app')
 
 @section('content')
@@ -42,7 +40,9 @@
                 </p>
             </div>
         </div>
-        <div class="card text-center" style="min-width: 250px; margin-bottom: 25px">
+        <div class="card text-center">
+            <h5 class="card-title" style="padding: 20px; font-size: 20px; font-family: Arial; color: #0c63e4">Pastries!</h5>
+            <img src="{{asset('turkberry-assets/pictures/11.jpg')}}" class="card-img-top" alt="..." style="height: 192px; padding: 15px">
             <div class="card-body">
                 <h5 class="card-title" style="font-size: 20px; font-family: Arial; color: #0c63e4">Breakfast!</h5>
                 <img src="{{asset('turkberry-assets/pictures/11.jpg')}}" class="card-img-top" alt="..." style="height: fit-content; padding: 15px;object-fit: cover;">
@@ -52,7 +52,9 @@
                 </p>
             </div>
         </div>
-        <div class="card text-center" style="min-width: 250px; margin-bottom: 25px">
+        <div class="card text-center">
+            <h5 class="card-title" style="padding: 20px; font-size: 20px; font-family: Arial; color: #0c63e4">Ice-Cream!</h5>
+            <img src="{{asset('turkberry-assets/pictures/7.jpg')}}" class="card-img-top" alt="..." style="height: 192px; padding: 15px">
             <div class="card-body">
                 <h5 class="card-title" style="font-size: 20px; font-family: Arial; color: #0c63e4">Frozen Yogurt!</h5>
                 <img src="{{asset('turkberry-assets/pictures/7.jpg')}}" class="card-img-top" alt="..." style="height: fit-content; padding: 15px;object-fit: cover;">
