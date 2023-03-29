@@ -3,7 +3,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <main class="py-4"  style="background-color: rgb(CB1C8D)"
+    <main class="py-4"  style="background-color: mintcream"
 {{--          style="background: url('turkberry-assets/pictures/27.jpg')"--}}
     >
 
@@ -59,7 +59,7 @@
         </div>
 
 
-     
+
         <div class="card-group">
         <div class="card" style="width: 22rem;">
             <img src="turkberry-assets/SpecialPresentations/easter.jpg" class="card-img-top" alt="easter">
