@@ -64,8 +64,8 @@
         <div class="card" style="width: 22rem;">
             <img src="turkberry-assets/SpecialPresentations/easter.jpg" class="card-img-top" alt="easter">
             <div class="card-body">
-                <h5 class="card-title">Easters Special</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <h5 class="card-title" style="font-family: SansSerif"  >Easters Special</h5>
+                <p class="card-text" style="font-family: TimesNewRoman">In celebration of Easter we bring to you our mini egg hurricane </p>
             </div>
 
         </div>
@@ -77,7 +77,10 @@
             </div>
 
         </div>
+
         </div>
+
+
     </div>
     </main>
 @endsection
