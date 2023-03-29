@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
@@ -11,16 +12,21 @@ class Variety extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'description', 'image', 'header', 'availability', 'stock'];
+
+    public $timestamps = false;
+
     public static function boot()
     {
         parent::boot();
-        static::creating(function($model)
+        static::created(function($model)
         {
             DB::table('trackings')->insert([
                 'table' => $model->getTable(),
                 'action' => 'c',
                 'table_id' => $model->id,
                 'action_by' => Auth::id(),
+                'action_at' => Carbon::now(),
             ]);
         });
 
@@ -31,6 +37,7 @@ class Variety extends Model
                 'action' => 'u',
                 'table_id' => $model->id,
                 'action_by' => Auth::id(),
+                'action_at' => Carbon::now(),
             ]);
         });
 
@@ -41,6 +48,7 @@ class Variety extends Model
                 'action' => 'd',
                 'table_id' => $model->id,
                 'action_by' => Auth::id(),
+                'action_at' => Carbon::now(),
             ]);
         });
     }

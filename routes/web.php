@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\VarietyController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,3 +42,4 @@ Route::get('/about', function () {
 });
 
 Route::resource('products',ProductController::class);
+Route::resource('varieties',VarietyController::class);
