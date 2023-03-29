@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="card text-center">
-            <h5 class="card-title" style="padding: 20px; font-size: 20px; font-family: Arial; color: #0c63e4">Ice-Cream!</h5>
+            <h5 class="card-title" style="padding: 20px; font-size: 20px; font-family: Arial; color: #0c63e4">Pastries!</h5>
             <img src="{{asset('turkberry-assets/pictures/11.jpg')}}" class="card-img-top" alt="..." style="height: 192px; padding: 15px">
             <div class="card-body">
                 <p class="card-text" style="color: #1750AC;">
@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="card text-center">
-            <h5 class="card-title" style="padding: 20px; font-size: 20px; font-family: Arial; color: #0c63e4">Pastries!</h5>
+            <h5 class="card-title" style="padding: 20px; font-size: 20px; font-family: Arial; color: #0c63e4">Ice-Cream!</h5>
             <img src="{{asset('turkberry-assets/pictures/7.jpg')}}" class="card-img-top" alt="..." style="height: 192px; padding: 15px">
             <div class="card-body">
                 <p class="card-text" style="color: #1750AC;padding-top: 1px" >
