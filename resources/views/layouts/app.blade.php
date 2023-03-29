@@ -37,9 +37,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link"  href="{{ redirect('admins.index') }}">{{ __('Admins') }}</a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link"  href="{{ redirect('admins.index') }}">{{ __('Admins') }}</a>--}}
+{{--                        </li>--}}
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link"  href="{{ url('/about') }}">About Us</a>
@@ -54,11 +54,11 @@
                                 </li>
                             @endif
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
+{{--                            @if (Route::has('register'))--}}
+{{--                                <li class="nav-item">--}}
+{{--                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
+{{--                                </li>--}}
+{{--                            @endif--}}
                         @else
                             <li class="nav-item dropdown">
 
