@@ -137,8 +137,13 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        $group = Header::orderBy('group')->get();
-        return view('products.edit',compact(['product']),compact('group'));
+        if (!Auth::check()) {
+            return redirect(route('products.index'))->with('status', 'Access Denied');
+
+        } else {
+            $group = Header::orderBy('group')->get();
+            return view('products.edit',compact(['product']),compact('group'));
+        }
     }
 
     /**
@@ -150,11 +155,6 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-
-        if (!Auth::check()) {
-            return redirect(route('products.index'))->with('status', 'Access Denied');
-
-        } else {
             $request->validate([
                 'name' => ['required', 'unique:products,name,' . $product->id, 'max:100'],
                 'description' => ['required', 'unique:products,description,' . $product->id, 'max:255'],
@@ -186,7 +186,6 @@ class ProductController extends Controller
             $product->save();
 
             return redirect(route('products.index'));
-        }
     }
 
     /**

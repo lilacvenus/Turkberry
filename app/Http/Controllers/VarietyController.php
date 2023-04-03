@@ -7,9 +7,11 @@ use App\Models\GroupDescription;
 use App\Models\Header;
 use App\Models\HeaderDescription;
 use App\Models\Variety;
+use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rule;
 
 class VarietyController extends Controller
 {
@@ -47,12 +49,11 @@ class VarietyController extends Controller
 
         } else {
             $request->validate([
-                'variety_name' => ['required', 'unique:variety,name', 'max:100'],
+                'variety_name' => Rule::unique('varieties')->where(fn (Builder $query) => $query->where('header', $request->header)),
 //                'variety_description' => ['required', 'unique:variety,description', 'max:255'],
                 'variety_description' => ['max:255'],
                 'variety_type' => ['required', 'exists:headers,name', 'max:100'],
-//                'image_url' => ['required', 'max:255', 'unique:variety,image', 'url', 'ends_with:.jpg,.png,.webp,.avif,.gif,.tiff,.jpeg'],
-                'image_url' => ['max:255']
+                'image_url' => ['max:255', 'unique:variety,image', 'ends_with:.jpg,.png,.webp,.avif,.gif,.tiff,.jpeg'], //doesn't let varieties in different headers share images though.
             ]);
             $headerID = DB::table('headers')->where('name', '=', $request->variety_type)->first()->id;
             //if ($request->product_available === '1') {
@@ -101,8 +102,13 @@ class VarietyController extends Controller
     {
         //can't add varieties headers that weren't seeded with one?
         //$group = Header::orderBy('group')->join('varieties', 'varieties.header', '=', 'headers.id')->select('headers.*')->groupBy('id')->get();
-        $group =  Header::orderBy('group')->get();
-        return view('varieties.edit',compact(['variety']),compact('group'));
+        if (!Auth::check()) {
+            return redirect(route('products.index'))->with('status', 'Access Denied');
+
+        } else {
+            $group =  Header::orderBy('group')->get();
+            return view('varieties.edit',compact(['variety']),compact('group'));
+        }
     }
 
     /**
@@ -114,40 +120,39 @@ class VarietyController extends Controller
      */
     public function update(Request $request, Variety $variety)
     {
-        if (!Auth::check()) {
-            return redirect(route('products.index'))->with('status', 'Access Denied');
+        //need to validate that the name is unique among the varieties under a header
+        //$varieties = Variety::where('header', '=', $request->header)->get();
+        //'email' => Rule::unique('users')->where(fn (Builder $query) => $query->where('account_id', 1))
+        $request->validate([
+            'name' => ['required', 'max:100'],
+            'name' => Rule::unique('varieties')->where(fn (Builder $query) => $query->where('header', $request->header))->ignore($variety->id),
+            'description' => ['max:255'],
+            'header' => ['required'],
+            'image' => ['required', 'max:255', 'unique:varieties,image,' . $variety->id, 'ends_with:.jpg,.png,.webp,.avif,.gif,.tiff,.jpeg'],
+        ]);
 
+
+        if ($request->get('stock') == null) {
+            $isStock = 0;
         } else {
-            $request->validate([
-                'name' => ['required', 'unique:varieties,name,' . $variety->id, 'max:100'],
-                'description' => ['required', 'unique:varieties,description,' . $variety->id, 'max:255'],
-                'header' => ['required', 'max:100'],
-                'image' => ['required', 'max:255', 'unique:varieties,image,' . $variety->id, 'url', 'ends_with:.jpg,.png,.webp,.avif,.gif,.tiff,.jpeg'],
-            ]);
-
-
-            if ($request->get('stock') == null) {
-                $isStock = 0;
-            } else {
-                $isStock = request('stock');
-            }
-
-            if ($request->get('availability') == null) {
-                $isAvailability = 0;
-            } else {
-                $isAvailability = request('availability');
-            }
-
-            $variety->name = $request->name;
-            $variety->description = $request->description;
-            $variety->header = $request->header;
-            $variety->image = $request->image;
-            $variety->stock = $isStock;
-            $variety->availability = $isAvailability;
-            $variety->save();
-
-            return redirect(route('products.index'));
+            $isStock = request('stock');
         }
+
+        if ($request->get('availability') == null) {
+            $isAvailability = 0;
+        } else {
+            $isAvailability = request('availability');
+        }
+
+        $variety->name = $request->name;
+        $variety->description = $request->description;
+        $variety->header = $request->header;
+        $variety->image = $request->image;
+        $variety->stock = $isStock;
+        $variety->availability = $isAvailability;
+        $variety->save();
+
+        return redirect(route('products.index'));
     }
 
     /**
