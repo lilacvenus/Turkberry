@@ -65,15 +65,17 @@
                             </div>
                             <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 w-100 m-sm-0 m-lg-3" style="margin-left: auto; margin-right: auto">
                                 @foreach($varieties as $variety)
-                                    @if(Auth::check())<a class="d-flex justify-content-center no-gutters" href="{{ route('varieties.edit',[ $variety->id]) }}" style="width: fit-content; padding: 0">@endif
+                                    @if(Auth::check())
+                                        <div class="justify-content-center"><a href="{{ route('varieties.edit',[ $variety->id]) }}">
+                                            @endif
                                     @if( $variety->header == $header->id )
                                         @if($variety->image ==null)
                                         <div class="text-center">{{$variety->name}}</div>
                                         @else
-                                        <img class="d-flex justify-content-center" src="{{$variety->image}}" alt={{$variety->name}} style="padding: 0;" >
+                                        <img class="img-fluid" src="{{$variety->image}}" alt={{$variety->name}}>
                                         @endif
                                     @endif
-                                    @if(Auth::check())</a>@endif
+                                    @if(Auth::check())</a></div>@endif
                                 @endforeach
                             </div>
                         @endif
