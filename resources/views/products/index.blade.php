@@ -26,7 +26,7 @@
             <div class="row">
                 @foreach($groupdescriptions as $groupdescription )
                     @if($groupdescription->group == $group->id)
-                        <h5 class="col-auto mx-auto text-center" style="margin: 25px" >{!! $groupdescription->details !!}</h5>
+                        <h5 class="col-auto mx-auto text-center" style="margin: 25px; font-size: medium" >{!! $groupdescription->details !!}</h5>
                     @endif
                 @endforeach
             </div>
