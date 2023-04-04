@@ -21,7 +21,7 @@
         <div class="text-center">
             <h2 class="col-auto mx-auto">{{$group->name}}</h2>
         </div>
-        <div id="hanging-icons" class="container" style="border: 1px solid gray; margin-bottom: 30px; border-radius: 25px; max-width: 1000px">
+        <div id="hanging-icons" class="container border border-info" style="margin-bottom: 30px; border-radius: 25px; max-width: 1000px">
 
             <div class="row">
                 @foreach($groupdescriptions as $groupdescription )
@@ -34,8 +34,8 @@
             @foreach($headers as $header)
                 @if($group->id == $header->group)
                     <div style="margin: 20px;">
-                    <div class="row border-bottom">
-                        <h4 class="col-auto mx-auto pb-2 text-center mt-3" >{{$header->name}}</h4>
+                    <div class="row border-bottom border-info" style="margin-bottom: 25px">
+                        <h4 class="col-auto mx-auto text-center border border-info" style="border-radius: 5px;">{{$header->name}}</h4>
                     </div>
                     <div class="row">
                         @foreach($headerdescriptions as $headerdescription)
@@ -52,7 +52,7 @@
                                 <div class="col-md-3 text-center p-0">
                                     @if(Auth::check())
                                         <a href="{{ route('products.edit',[ $product->id]) }}">
-                                            <div style="margin: 10px; font-size:medium">
+                                            <div style="margin: 15px; font-size:medium;">
                                                 {{$product->name}}
                                                 @if($product->price != null)
                                                     - ${{$product->price}}
@@ -63,7 +63,7 @@
                                             </div>
                                         </a>
                                     @else
-                                        <div style="margin: 10px">
+                                        <div style="margin: 15px; font-size:medium">
                                             {{$product->name}}
                                             @if($product->price != null)
                                                 - ${{$product->price}}
