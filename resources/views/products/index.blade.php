@@ -1,91 +1,102 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            @if (session('status'))
-            <div class="card-header">{{ __('Status Message') }}</div>
-            <div class="card-body">
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
+
+    @if (session('status'))
+        <div class="card-header text-center">{{ __('Status Message') }}</div>
+        <div class="card-body text-center" style="margin-bottom: 30px">
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
             </div>
-            @endif
-            @if(Auth::check())
-            <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Product</a>
+        </div>
+    @endif
+
+    @if(Auth::check())
+        <div class="text-center" style="margin-bottom: 30px">
+            <a class= "btn btn-primary" style="margin-left: 20px; margin-right: 20px" href="{{ route('products.create') }}">Create New Product</a>
             <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Variety</a>
-            <!--<a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Group Description</a>
-            <a class= "btn btn-primary" href="{{ route('products.create') }}">Create New Header Description</a>-->
-            @endif
-            @foreach($groups as $group)
-                <div class="card m-3">
-                    <div class="card-header">
-                        <h3>{{$group->name}}</h3>
+        </div>
+    @endif
+
+    @foreach($groups as $group)
+        <div class="text-center">
+            <h2 class="col-auto mx-auto">{{$group->name}}</h2>
+        </div>
+        <div id="hanging-icons" class="container" style="border: 1px solid gray; margin-bottom: 30px; border-radius: 25px; max-width: 1000px">
+
+            <div class="row">
+                @foreach($groupdescriptions as $groupdescription )
+                    @if($groupdescription->group == $group->id)
+                        <h5 class="col-auto mx-auto" style="margin: 25px" >{{$groupdescription->details}}</h5>
+                    @endif
+                @endforeach
+            </div>
+
+            @foreach($headers as $header)
+                @if($group->id == $header->group)
+                    <div style="margin: 20px;">
+                    <div class="row border-bottom">
+                        <h4 class="col-auto mx-auto pb-2 text-center mt-3" >{{$header->name}}</h4>
                     </div>
-                    <div class="card-body">
-                        <div class="container px-4 " id="hanging-icons">
-                            <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3" style="margin-left: auto; margin-right: auto">
-                            @foreach($groupdescriptions as $groupdescription )
-                            @if($groupdescription->group == $group->id)
-                                <div class="text-center">{!! $groupdescription->description !!}</div>
+                    <div class="row">
+                        @foreach($headerdescriptions as $headerdescription)
+                            @if( $headerdescription->header == $header->id )
+                                <h7 class="col-auto mx-auto" style="margin: 15px; font-size: medium">{{$headerdescription->details}}</h7>
                             @endif
-                            @endforeach
-                            </div>
-                            @foreach($headers as $header )
-                            @if( $group->id == $header->group)
-                            <h4 class="pb-2 border-bottom text-center mt-3 font-weight-bold">{{$header->name}}</h4>
-                            <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3" style="margin-left: auto; margin-right: auto">
-                                @foreach($headerdescriptions as $headerdescription)
-                                @if( $headerdescription->header == $header->id )
-                                <div class="text-center">{!! $headerdescription->details !!}</div>
-                                @endif
-                                @endforeach
-                            </div>
-                            <div class="row row-cols-1 row-cols-lg-3 w-100 mt-3 " style="margin-left: auto; margin-right: auto">
-                                @foreach($products as $product)
-                                @if( $product->header == $header->id )
-                                {{--Link pass the product / the id--}}
-                                    @if(Auth::check())
-                                    <a href="{{ route('products.edit',[ $product->id]) }}">
-                                        <div class="text-center">
-                                        {{$product->name}}
-                                        @if($product->price != null) - ${{$product->price}}@endif
-                                        @if($product->image != null)<img src="{{$product->image}}" alt={{$product->name}}>@endif
-                                        </div>
-                                    </a>
-                                    @else
-                                    <div class="text-center">
-                                        {{$product->name}}
-                                        @if($product->price != null) - ${{$product->price}}@endif
-                                        @if($product->image != null)<img src="{{$product->image}}" alt={{$product->name}}>@endif
-                                    </div>
-                                    @endif
-                                @endif
-                                @endforeach
-                            </div>
-                            <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 w-100 m-sm-0 m-lg-3" style="margin-left: auto; margin-right: auto">
-                                @foreach($varieties as $variety)
-                                    @if(Auth::check())
-                                        <div class="justify-content-center"><a href="{{ route('varieties.edit',[ $variety->id]) }}">
-                                            @endif
-                                    @if( $variety->header == $header->id )
-                                        @if($variety->image ==null)
-                                        <div class="text-center">{{$variety->name}}</div>
-                                        @else
-                                        <img class="img-fluid" src="{{$variety->image}}" alt={{$variety->name}}>
-                                        @endif
-                                    @endif
-                                    @if(Auth::check())</a></div>@endif
-                                @endforeach
-                            </div>
-                        @endif
                         @endforeach
-                        </div>
                     </div>
-                </div>
-                <br/>
+
+                    <div class="row justify-content-center">
+                        {{--SO MANY NULL ROWS CAUSING SPACING ISSUES, FROM OTHER GROUPS--}}
+                        @foreach($products as $product)
+                            @if($product->header == $header->id)
+                                <div class="col-md-3 text-center p-0">
+                                    @if(Auth::check())
+                                        <a href="{{ route('products.edit',[ $product->id]) }}">
+                                            <div style="margin: 10px; font-size:medium">
+                                                {{$product->name}}
+                                                @if($product->price != null)
+                                                    - ${{$product->price}}
+                                                @endif
+                                                @if($product->image != null)
+                                                    <img class="img-fluid no-gutters" src="{{$product->image}}" alt={{$product->name}}>
+                                                @endif
+                                            </div>
+                                        </a>
+                                    @else
+                                        <div style="margin: 10px">
+                                            {{$product->name}}
+                                            @if($product->price != null)
+                                                - ${{$product->price}}
+                                            @endif
+                                            @if($product->image != null)
+                                                <img src="{{$product->image}}" alt={{$product->name}}>
+                                            @endif
+                                        </div>
+                                    @endif
+                                </div>
+                            @endif
+                        @endforeach
+                        @foreach($varieties as $variety)
+                                @if($variety->header == $header->id)
+                                <div class="col-md-3 text-center p-0">
+                                        @if(Auth::check())
+                                            <a href="{{ route('varieties.edit',[$variety->id]) }}">
+                                                @endif
+                                        @if($variety->image == null)
+                                            <div style="margin: 10px; font-size:medium">{{$variety->name}}</div>
+                                        @else
+                                            <img class="img-fluid no-gutters" src="{{$variety->image}}" alt="{{$variety->name}}"/>
+                                        @endif
+                                                @if(Auth::check())
+                                            </a>
+                                        @endif
+                                    </div>
+                                @endif
+                        @endforeach
+                    </div>
+                    </div>
+                @endif
             @endforeach
         </div>
-    </div>
-</div>
+    @endforeach
 @endsection
