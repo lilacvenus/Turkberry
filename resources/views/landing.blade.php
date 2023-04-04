@@ -1,10 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <main class="py-4"  style="background-color: mintcream"
-        {{--          style="background: url('turkberry-assets/pictures/27.jpg')"--}}
-    >
-        <div class="container"  >
+    <main class="py-4">
+        <div class="container">
 
             {{--    <div class="row justify-content-center">--}}
             {{--        <div class="col-md-8">--}}

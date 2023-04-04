@@ -21,7 +21,7 @@
         <div class="text-center">
             <h2 class="col-auto mx-auto">{{$group->name}}</h2>
         </div>
-        <div id="hanging-icons" class="container border border-info" style="margin-bottom: 30px; border-radius: 25px; max-width: 1000px">
+        <div id="hanging-icons" class="container border border-info" style="margin-bottom: 30px; border-radius: 25px; max-width: 1000px; background-color: white;">
 
             <div class="row">
                 @foreach($groupdescriptions as $groupdescription )
@@ -35,7 +35,7 @@
                 @if($group->id == $header->group)
                     <div style="margin: 20px;">
                     <div class="row border-bottom border-info" style="margin-bottom: 25px">
-                        <h4 class="col-auto mx-auto text-center border border-info" style="border-radius: 5px;">{{$header->name}}</h4>
+                        <h4 class="col-auto mx-auto text-center" style="border-radius: 5px;">{{$header->name}}</h4>
                     </div>
                     <div class="row">
                         @foreach($headerdescriptions as $headerdescription)

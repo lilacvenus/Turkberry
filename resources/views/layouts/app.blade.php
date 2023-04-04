@@ -12,16 +12,17 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="{{ asset('resources/css/app.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: rgba(197, 52, 123);">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'TurkBerry') }}
+                    <span style="color: #ffffff; font-family: 'Alba', sans-serif;">turk</span><span style="color: #2c5ba8; font-family: 'Alba', sans-serif;">berry</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -43,7 +44,6 @@
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link"  href="{{ url('/about') }}">About Us</a>
-{{--                                <a class="nav-link" href="{{ redirect('about') }}">{{ __('About Us') }}</a>--}}
                             </li>
 
                         <!-- Authentication Links -->
@@ -80,18 +80,19 @@
                                 </div>
                             </li>
                         @endguest
+                        </ul>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="background-color: #fff6fa;">
             @yield('content')
         </main>
     </div>
 </body>
 
-<section class="">
+<section>
     <!-- Footer -->
     <footer class="bg-secondary text-white text-center">
         <div class="d-flex justify-content-between align-items-center p-3" style="background-color: rgba(197, 52, 123);">
