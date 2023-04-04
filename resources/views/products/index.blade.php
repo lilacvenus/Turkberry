@@ -26,7 +26,7 @@
             <div class="row">
                 @foreach($groupdescriptions as $groupdescription )
                     @if($groupdescription->group == $group->id)
-                        <h5 class="col-auto mx-auto" style="margin: 25px" >{{$groupdescription->details}}</h5>
+                        <h5 class="col-auto mx-auto text-center" style="margin: 25px" >{!! $groupdescription->details !!}</h5>
                     @endif
                 @endforeach
             </div>
@@ -40,7 +40,7 @@
                     <div class="row">
                         @foreach($headerdescriptions as $headerdescription)
                             @if( $headerdescription->header == $header->id )
-                                <h7 class="col-auto mx-auto" style="margin: 15px; font-size: medium">{{$headerdescription->details}}</h7>
+                                <h7 class="col-auto mx-auto text-center" style="margin: 15px; font-size: medium">{!! $headerdescription->details !!}</h7>
                             @endif
                         @endforeach
                     </div>

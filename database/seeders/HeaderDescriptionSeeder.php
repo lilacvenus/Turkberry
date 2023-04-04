@@ -81,11 +81,9 @@ class HeaderDescriptionSeeder extends Seeder
             'details' => 'Carafe - $20.00',
         ]);
 
-        $details = nl2br('Morning Miracle - $4.00\n(Medium coffee + personalized donut)');
-
         DB::table('header_descriptions')->insert([
             'header' => 10,
-            'details' => $details,
+            'details' => 'Morning Miracle - $4.00<br>(Medium coffee + personalized donut)',
         ]);
 
         DB::table('header_descriptions')->insert([
