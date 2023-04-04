@@ -18,7 +18,6 @@ class ProductSeeder extends Seeder
     {
         DB::table('products')->insert([
             'name' => 'Turks Head',
-            'description' => '',
             'price' => 5.00,
             'image' => '',
             'availability' => true,
@@ -28,7 +27,6 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Presidente',
-            'description' => '',
             'price' => 6.00,
             'image' => '',
             'availability' => true,
@@ -38,7 +36,6 @@ class ProductSeeder extends Seeder
 
         DB::table('products')->insert([
             'name' => 'Coors Light',
-            'description' => '',
             'price' => 6.00,
             'image' => '',
             'availability' => true,

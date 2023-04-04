@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
             'last_name' => 'Burgess',
             'profile_picture' => 'turkberry-assets/staff/1.jpg',
             'store' => 'main',
-            'email' => 'punkassbitch@1996.com',
+            'email' => 'punk@1996.com',
             'password' => Hash::make('inet2005'),
         ]);
 
