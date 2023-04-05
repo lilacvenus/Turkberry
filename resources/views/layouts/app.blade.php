@@ -30,59 +30,42 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="btn btn-primary" href="{{ route('products.index') }}">{{ __('Products') }}</a>
-                        </li>
-                    </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-{{--                        <li class="nav-item">--}}
-{{--                            <a class="nav-link"  href="{{ redirect('admins.index') }}">{{ __('Admins') }}</a>--}}
-{{--                        </li>--}}
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link"  href="{{ url('/about') }}">About Us</a>
-                            </li>
-
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ route('products.index') }}" style="padding: 10px; display: block; text-align: center; text-decoration: none;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">{{ __('Products') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ url('/about') }}" style="padding: 10px; display: block; text-align: center; text-decoration: none;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">About Us</a>
+                        </li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link text-white" href="{{ route('login') }}" style="padding: 10px; display: block; text-align: center; text-decoration: none;" onmouseover="this.style.textDecoration='underline';" onmouseout="this.style.textDecoration='none';">{{ __('Login') }}</a>
                                 </li>
                             @endif
-
-{{--                            @if (Route::has('register'))--}}
-{{--                                <li class="nav-item">--}}
-{{--                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>--}}
-{{--                                </li>--}}
-{{--                            @endif--}}
                         @else
                             <li class="nav-item dropdown">
-
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <img style="border-radius: 50%; width: 40px; height: 40px;" src="{{ asset(Auth::user()->profile_picture) }}">
                                     {{ Auth::user()->first_name. " " .Auth::user()->last_name }}
                                 </a>
-
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>
                             </li>
                         @endguest
-                        </ul>
                     </ul>
                 </div>
+
             </div>
         </nav>
 
@@ -95,29 +78,31 @@
 <section>
     <!-- Footer -->
     <footer class="bg-secondary text-white text-center">
-        <div class="d-flex justify-content-between align-items-center p-3" style="background-color: rgba(197, 52, 123);">
-            <div>
-                Open 7am - 11pm daily
-                <br>
-                <small>Salt Mills Plaza Grace Bay Rd, Grace Bay, TKCA 1ZZ Turks and Caicos Islands</small>
-            </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center align-items-center py-3" style="background-color: rgba(197, 52, 123);">
+                <div class="col-md-6 col-lg-5 text-md-right">
+                    Open 7am - 11pm daily
+                    <br>
+                    <small>Salt Mills Plaza Grace Bay Rd, Grace Bay, TKCA 1ZZ Turks and Caicos Islands</small>
+                </div>
 
-            <div>
-                <a class="text-white" href="tel:6494312233">649-431-2233</a>
-            </div>
+                <div class="col-md-6 col-lg-5 d-flex justify-content-center">
+                    <a href="tel:6494312233" class="px-2" title="(649) 431-2233">
+                        <img src="/turkberry-assets/Footer/phone.png" alt="Phone" style="width: 40px; height: 40px;">
+                    </a>
 
-            <div class="d-flex mr-3">
-                <a href="https://www.google.com/maps/dir//21.7949213,-72.1816343/@21.7945962,-72.1785947,17z/data=!4m2!4m1!3e0" class="px-2">
-                    <img src="/turkberry-assets/Footer/map.png" alt="Map" style="width: 40px; height: 40px;">
-                </a>
+                    <a href="https://www.google.com/maps/dir//21.7949213,-72.1816343/@21.7945962,-72.1785947,17z/data=!4m2!4m1!3e0" class="px-2" title="Google Maps">
+                        <img src="/turkberry-assets/Footer/map.png" alt="Map" style="width: 40px; height: 40px;">
+                    </a>
 
-                <a href="mailto:yum@turkberry.com" class="px-2">
-                    <img src="/turkberry-assets/Footer/mail.png" alt="Mail" style="width: 40px; height: 40px;">
-                </a>
+                    <a href="mailto:yum@turkberry.com" class="px-2" title="yum@turkberry.com">
+                        <img src="/turkberry-assets/Footer/mail.png" alt="Mail" style="width: 40px; height: 40px;">
+                    </a>
 
-                <a href="https://www.facebook.com/turkberry" class="px-2">
-                    <img src="/turkberry-assets/Footer/facebook.png" alt="Facebook" style="width: 40px; height: 40px;">
-                </a>
+                    <a href="https://www.facebook.com/turkberry" class="px-2" title="Facebook">
+                        <img src="/turkberry-assets/Footer/facebook.png" alt="Facebook" style="width: 40px; height: 40px;">
+                    </a>
+                </div>
             </div>
         </div>
     </footer>

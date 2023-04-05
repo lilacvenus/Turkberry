@@ -51,8 +51,8 @@
                 <div class="card" style="width: 22rem;">
                     <img src="turkberry-assets/SpecialPresentations/easter.jpg" class="card-img-top" alt="easter">
                     <div class="card-body">
-                        <h5 class="card-title" style="font-family: SansSerif"  >Easters Special</h5>
-                        <p class="card-text" style="font-family: TimesNewRoman">In celebration of Easter we bring to you our mini egg hurricane.</p>
+                        <h5 class="card-title">Easters Special</h5>
+                        <p class="card-text">Get swept away in the Easter spirit with our irresistible mini egg hurricane!</p>
                     </div>
 
                 </div>
@@ -60,7 +60,7 @@
                     <img src="turkberry-assets/SpecialPresentations/promotion-milkshakes9.jpg" class="card-img-top" alt="promotion">
                     <div class="card-body">
                         <h5 class="card-title">Starting 2023</h5>
-                        <p class="card-text">We have delicious vanilla, milk chocolate, dark chocolate, and cookies and cream flavours.</p>
+                        <p class="card-text">Satisfy your cravings with our delicious vanilla, milk chocolate, dark chocolate, and cookies and cream flavors!</p>
                     </div>
 
                 </div>
