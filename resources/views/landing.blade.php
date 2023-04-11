@@ -51,7 +51,7 @@
                 <div class="card" style="width: 22rem;">
                     <img src="turkberry-assets/SpecialPresentations/easter.jpg" class="card-img-top" alt="easter">
                     <div class="card-body">
-                        <h5 class="card-title">Easters Special</h5>
+                        <h5 class="card-title">Easter Special</h5>
                         <p class="card-text">Get swept away in the Easter spirit with our irresistible mini egg hurricane!</p>
                     </div>
 
