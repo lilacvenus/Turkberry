@@ -59,7 +59,7 @@
                 <div class="card"  >
                     <img src="turkberry-assets/SpecialPresentations/promotion-milkshakes9.jpg" class="card-img-top" alt="promotion">
                     <div class="card-body">
-                        <h5 class="card-title">Starting 2023</h5>
+                        <h5 class="card-title">Starting 2024</h5>
                         <p class="card-text">Satisfy your cravings with our delicious vanilla, milk chocolate, dark chocolate, and cookies and cream flavors!</p>
                     </div>
 
