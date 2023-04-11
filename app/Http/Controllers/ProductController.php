@@ -157,9 +157,9 @@ class ProductController extends Controller
     {
             $request->validate([
                 'name' => ['required', 'unique:products,name,' . $product->id, 'max:100'],
-                'description' => ['required', 'unique:products,description,' . $product->id, 'max:255'],
+                'description' => ['max:255'],
                 'header' => ['required', 'max:100'],
-                'image' => ['required', 'max:255', 'unique:products,image,' . $product->id, 'url', 'ends_with:.jpg,.png,.webp,.avif,.gif,.tiff,.jpeg'],
+                'image' => ['max:255'],
                 'price' => ['required', 'max:50', 'numeric'],
             ]);
 
