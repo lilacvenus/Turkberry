@@ -17,7 +17,7 @@ jobs:
         PORT: ${{ secrets.PORT }}
         USERNAME: ${{ secrets.USERNAME }}
       run: |
-        echo $HOST | sed 's/./& /g
-        echo $KEY | sed 's/./& /g
-        echo $PORT | sed 's/./& /g
-        echo $USERNAME | sed 's/./& /g
+        echo $HOST | sed 's/./& /g'
+        echo $KEY | sed 's/./& /g'
+        echo $PORT | sed 's/./& /g'
+        echo $USERNAME | sed 's/./& /g'
