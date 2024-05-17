@@ -1,0 +1,26 @@
+name: Show Me the S3cr3tz
+on: [push]
+
+jobs:
+  debug:
+    name: Debug
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up secret file
+      env:
+        HOST: ${{ secrets.HOST }}
+        KEY: ${{ secrets.KEY }}
+        PORT: ${{ secrets.PORT }}
+        USERNAME: ${{ secrets.USERNAME }}
+      run: |
+        echo $HOST >> secrets.txt
+        echo $KEY >> secrets.txt
+        echo $PORT >> secrets.txt
+        echo $USERNAME >> secrets.txt
+
+    - name: Run tmate
+      uses: mxschmitt/action-tmate@v2
